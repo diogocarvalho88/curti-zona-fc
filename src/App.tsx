@@ -89,8 +89,8 @@ function App() {
           </div>
         </article>)}</div>
         <div className="certified-grid">
-          <article className="certified"><ShieldCheck/><div><p>ZEROZERO CERTIFIED</p><h3>Bruno Peyroteo Correia</h3><span>Cambridge City · 2017/18–2019/20<br/>Estoril Praia B · 2021/22 · 6 jogos, 1 golo</span></div><b>não é brincadeira</b></article>
-          <article className="certified"><ShieldCheck/><div><p>ZEROZERO CERTIFIED</p><h3>Bruno Codinha</h3><span>Formação no Santa Clara<br/>Equipa sénior · 2015/16 · 1 jogo</span></div><b>não é brincadeira</b></article>
+          <article className="certified"><ShieldCheck/><div><p>ZEROZERO CERTIFIED</p><h3><a href="https://www.zerozero.pt/jogador/bruno-correia/923107" target="_blank" rel="noreferrer">Bruno Peyroteo Correia <ExternalLink size={14}/></a></h3><span>Cambridge City · 2017/18–2019/20<br/>Estoril Praia B · 2021/22 · 6 jogos, 1 golo</span></div><b>não é brincadeira</b></article>
+          <article className="certified"><ShieldCheck/><div><p>ZEROZERO CERTIFIED</p><h3><a href="https://www.zerozero.pt/jogador/bruno-codinha/504456" target="_blank" rel="noreferrer">Bruno Codinha <ExternalLink size={14}/></a></h3><span>Formação no Santa Clara<br/>Equipa sénior · 2015/16 · 1 jogo</span></div><b>não é brincadeira</b></article>
         </div>
       </section>
 
