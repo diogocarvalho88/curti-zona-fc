@@ -16,7 +16,8 @@
   ],
   "members": [
     {"id":"balhau","name":"Balhau","role":"Antigo jogador","group":"honorary"}, {"id":"neves","name":"Neves","role":"Antigo jogador","group":"honorary"},
-    {"id":"pinha","name":"Pinha","role":"Antigo jogador","group":"honorary"}, {"id":"cabecinha","name":"Cabecinha","role":"Membro honorário","group":"honorary"},
+    {"id":"pinha","name":"Pinha","role":"Antigo jogador","group":"honorary"}, {"id":"pedro-p-santos","name":"Pedro P. Santos","role":"Ex-guarda-redes · formação no Real SC · 1 jogo na 1.ª época — obrigado pelos serviços prestados","group":"honorary"},
+    {"id":"cabecinha","name":"Cabecinha","role":"Membro honorário","group":"honorary"},
     {"id":"zizou","name":"Zizou","role":"Membro honorário","group":"honorary"}, {"id":"bt","name":"BT","role":"Membro honorário","group":"honorary"},
     {"id":"carolina","name":"Carolina","role":"Diretora de comunicação · redes sociais · adepta","group":"staff"},
     {"id":"guilherme","name":"Guilherme Lopes","role":"Delegado","group":"staff"},
