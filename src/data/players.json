@@ -1,0 +1,11 @@
+[
+  {"id":"diogo","name":"Diogo Carvalho","number":11,"position":"Ala"},
+  {"id":"andre","name":"André Lopes","number":6,"position":"Universal"},
+  {"id":"pedrinho","name":"Pedro Correia","nickname":"Pedrinho","number":10,"position":"Médio"},
+  {"id":"peyroteo","name":"Bruno Peyroteo Correia","number":9,"position":"Avançado","zerozero":"https://www.zerozero.pt/jogador/bruno-correia/923107"},
+  {"id":"codinha","name":"Bruno Codinha","number":null,"position":"Defesa","zerozero":"https://www.zerozero.pt/jogador/bruno-codinha/504456"},
+  {"id":"francis","name":"Francisco Gonçalves","nickname":"Mad Honey","number":18,"position":"Universal"},
+  {"id":"jorge","name":"Jorge Ambrósio","nickname":"Ambrux","number":16,"position":"Médio"},
+  {"id":"filipe","name":"Filipe Campos","number":8,"position":"Ala"},
+  {"id":"jonicas","name":"João Figueira","nickname":"Jonicas","number":2,"position":"Defesa"}
+]

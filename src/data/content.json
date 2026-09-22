@@ -1,0 +1,29 @@
+{
+  "highlights": [
+    {"id":"proliga","title":"Campeões da ProLiga Lisboa 4","season":"2024/25","summary":"Uma época de subida, taça levantada e contas bem feitas.","record":"31 pts · 9V 4E 1D · 46–16","url":"https://apminifootball.mygol.es/tournaments"},
+    {"id":"superliga","title":"3.º na SuperLiga Lisboa 2","season":"2025/26","summary":"Subimos de divisão e recusámos fazer figura de corpo presente.","record":"26 pts · 8V 2E 4D · 49–33","url":"https://apminifootball.mygol.es/tournaments"},
+    {"id":"cup","title":"Quartos da MiniFootball Cup","season":"2026","summary":"Entre os oito melhores. Bruno Correia assinou 5 golos e 1 assistência em 5 jogos.","record":"Top 8 nacional","url":"https://apminifootball.mygol.es/tournaments"}
+  ],
+  "availability": [
+    {"playerId":"diogo","status":"injured","note":"Em recuperação desde 17 de maio.","since":"2026-05-17"}
+  ],
+  "news": [
+    {"id":"ready","date":"2026-09-20","category":"Balneário","title":"Preparadíssimos para 2026/27","summary":"Pré-época feita, táticas alinhadíssimas e a sede crónica de vitória devidamente hidratada."},
+    {"id":"market","date":"2026-09-12","category":"Mercado","title":"Três reforços, três abraços de saída","summary":"Chegam três reforços. Balhau, Pinha e Neves deixam o plantel, mas não saem da família."},
+    {"id":"kit","date":"2026-09-05","category":"Equipamento","title":"Novo equipamento a caminho","summary":"Está no forno. O departamento de estilo garante mais tecido, mais classe e a mesma transpiração."},
+    {"id":"logo-vote","date":"2026-08-29","category":"Democracia","title":"Proposta de Mad Honey chumbada","summary":"Francis apresentou uma alternativa ao emblema. A maioria disse não. A amizade sobreviveu à votação.","image":"/images/francis-logo-proposal.webp"},
+    {"id":"shirts","date":"2026-08-18","category":"Alerta","title":"Desapareceram 6 camisolas L","summary":"Qualquer informação útil deve seguir pela nossa caixa de mensagens no Instagram. Não fazemos perguntas (muitas)."}
+  ],
+  "members": [
+    {"id":"balhau","name":"Balhau","role":"Antigo jogador","group":"honorary"}, {"id":"neves","name":"Neves","role":"Antigo jogador","group":"honorary"},
+    {"id":"pinha","name":"Pinha","role":"Antigo jogador","group":"honorary"}, {"id":"cabecinha","name":"Cabecinha","role":"Membro honorário","group":"honorary"},
+    {"id":"zizou","name":"Zizou","role":"Membro honorário","group":"honorary"}, {"id":"bt","name":"BT","role":"Membro honorário","group":"honorary"},
+    {"id":"carolina","name":"Carolina","role":"Diretora de comunicação · redes sociais · adepta","group":"staff"},
+    {"id":"guilherme","name":"Guilherme Lopes","role":"Delegado","group":"staff"},
+    {"id":"joana","name":"Joana Brito","role":"Fã oficial","group":"fans"}, {"id":"francisca","name":"Francisca","role":"Fã oficial","group":"fans"},
+    {"id":"paulo","name":"Paulo Lopes","role":"Fã oficial","group":"fans"}, {"id":"paula","name":"Paula Carvalho","role":"Fã oficial","group":"fans"},
+    {"id":"berry","name":"Berry","role":"Cãobancada","group":"dogs"}, {"id":"yoshi","name":"Yoshi","role":"Cãobancada","group":"dogs"},
+    {"id":"future-dogs","name":"Futuros cães da equipa","role":"Inscrições sempre abertas","group":"dogs"}
+  ],
+  "videos": []
+}

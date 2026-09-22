@@ -1,0 +1,29 @@
+{
+  "name": "curti-zona-fc",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "sync": "node --experimental-strip-types scripts/sync-mygol.ts",
+    "build": "npm run sync && tsc -b && vite build",
+    "test": "vitest run",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "latest",
+    "vite": "latest",
+    "typescript": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "lucide-react": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "jsdom": "latest",
+    "sharp": "latest",
+    "vitest": "latest"
+  }
+}
