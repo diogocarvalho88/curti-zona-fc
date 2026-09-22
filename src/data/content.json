@@ -10,7 +10,7 @@
   "news": [
     {"id":"ready","date":"2026-09-20","category":"Balneário","title":"Preparadíssimos para 2026/27","summary":"Pré-época feita, táticas alinhadíssimas e a sede crónica de vitória devidamente hidratada."},
     {"id":"market","date":"2026-09-12","category":"Mercado","title":"Três reforços, três abraços de saída","summary":"Chegam três reforços. Balhau, Pinha e Neves deixam o plantel, mas não saem da família."},
-    {"id":"kit","date":"2026-09-05","category":"Equipamento","title":"Novo equipamento a caminho","summary":"Está no forno. O departamento de estilo garante mais tecido, mais classe e a mesma transpiração."},
+    {"id":"kit","date":"2026-09-05","category":"Equipamento","title":"Novo equipamento a caminho","summary":"Está no forno. O departamento de estilo garante mais tecido, mais classe e a mesma transpiração.","image":"/images/kit-preview.webp"},
     {"id":"logo-vote","date":"2026-08-29","category":"Democracia","title":"Proposta de Mad Honey chumbada","summary":"Francis apresentou uma alternativa ao emblema. A maioria disse não. A amizade sobreviveu à votação.","image":"/images/francis-logo-proposal.webp"},
     {"id":"shirts","date":"2026-08-18","category":"Alerta","title":"Desapareceram 6 camisolas L","summary":"Qualquer informação útil deve seguir pela nossa caixa de mensagens no Instagram. Não fazemos perguntas (muitas)."}
   ],

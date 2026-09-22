@@ -6,6 +6,8 @@ const jobs = [
   ['official-logo.jpg', 'official-logo.webp', 800],
   ['team-01.jpg', 'team-01.webp', 1800],
   ['team-02.jpg', 'team-02.webp', 1800],
+  ['kit-preview.jpeg', 'kit-preview.webp', 1000],
+  ['francis-logo-proposal.jpeg', 'francis-logo-proposal.webp', 1200],
 ]
 
 await Promise.all(jobs.map(([input, output, width]) => sharp(resolve(imageDir, 'originals', input))
