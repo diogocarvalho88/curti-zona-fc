@@ -1,5 +1,6 @@
 export interface Player { id: string; name: string; nickname?: string; number: number | null; position: string; photo?: string; bio?: string; zerozero?: string }
-export interface CareerHighlight { id: string; title: string; season: string; summary: string; record?: string; url?: string }
+export interface CareerHighlight { id: string; title: string; season: string; summary: string; record?: string; mvp?: string; url?: string }
+export interface GalleryItem { id: string; title: string; caption: string; image: string; alt: string; url: string }
 export interface Availability { playerId: string; status: 'available' | 'injured' | 'suspended'; note: string; since?: string }
 export interface NewsItem { id: string; date: string; title: string; summary: string; category: string; image?: string }
 export interface Match { id: string; round: number; date: string | null; home: string; away: string; homeScore: number | null; awayScore: number | null; venue?: string; videoId?: string }

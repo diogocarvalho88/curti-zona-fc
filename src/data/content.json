@@ -1,8 +1,12 @@
 {
   "highlights": [
-    {"id":"proliga","title":"Campeões da ProLiga Lisboa 4","season":"2025/26 · 1.ª época","summary":"Uma época de subida, taça levantada e contas bem feitas.","record":"31 pts · 9V 4E 1D · 46–16","url":"https://apminifootball.mygol.es/tournaments"},
-    {"id":"superliga","title":"3.º na SuperLiga Lisboa 2","season":"2025/26 · 2.ª época","summary":"Subimos de divisão e recusámos fazer figura de corpo presente.","record":"26 pts · 8V 2E 4D · 49–33","url":"https://apminifootball.mygol.es/tournaments"},
-    {"id":"cup","title":"Quartos da MiniFootball Cup","season":"2026","summary":"Entre os oito melhores. Bruno Correia assinou 5 golos e 1 assistência em 5 jogos.","record":"Top 8 nacional","url":"https://apminifootball.mygol.es/tournaments"}
+    {"id":"proliga","title":"Campeões da ProLiga Lisboa 4","season":"2025/26 · 1.ª época","summary":"Uma época de subida, taça levantada e contas bem feitas.","record":"31 pts · 9V 4E 1D · 46–16","mvp":"Bruno Peyroteo Correia","url":"https://apminifootball.mygol.es/tournaments/586/teams/7373"},
+    {"id":"superliga","title":"3.º na SuperLiga Lisboa 2","season":"2025/26 · 2.ª época","summary":"Subimos de divisão e recusámos fazer figura de corpo presente.","record":"26 pts · 8V 2E 4D · 49–33","url":"https://apminifootball.mygol.es/tournaments/638/teams/8022"},
+    {"id":"cup","title":"Quartos da MiniFootball Cup","season":"2026","summary":"Entre os oito melhores. Bruno Correia assinou 5 golos e 1 assistência em 5 jogos.","record":"Top 8 nacional","url":"https://apminifootball.mygol.es/tournaments/627?tab=classification&stage=1"}
+  ],
+  "gallery": [
+    {"id":"campeoes-proliga","title":"Campeões da ProLiga","caption":"A taça levantada na 1.ª época de 2025/26.","image":"/images/instagram-campeoes-proliga.webp","alt":"Jogadores do Curti Zona FC com as medalhas após vencerem a ProLiga Lisboa 4","url":"https://www.instagram.com/curti_zona_fc/p/DT89WVNiJvC/"},
+    {"id":"minifootball-cup","title":"MiniFootball Cup","caption":"A equipa que chegou aos quartos-de-final em Almeirim.","image":"/images/instagram-minifootball-cup.webp","alt":"Equipa do Curti Zona FC na MiniFootball Cup de 2026","url":"https://www.instagram.com/curti_zona_fc/p/DU0mhTBjNm3/"}
   ],
   "availability": [
     {"playerId":"diogo","status":"injured","note":"Em recuperação desde 17 de maio.","since":"2026-05-17"}
