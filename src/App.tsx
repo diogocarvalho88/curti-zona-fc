@@ -53,7 +53,7 @@ function App() {
     <main id="top">
       <section className="hero">
         <div className="hero-copy">
-          <p className="eyebrow light">ÉPOCA 2026/27 · LISBOA</p>
+          <p className="eyebrow light">1.ª ÉPOCA 2026/27 · LISBOA</p>
           <h1>Futebol<br/><em>com bula.</em></h1>
           <p className="hero-lead">Pré-época feita. Táticas alinhadíssimas.<br/>Sede crónica de vitória.</p>
           <div className="hero-actions"><ExternalButton href={links.mygol}>Próximo jogo</ExternalButton><a href="#história" className="text-link">Conhece a equipa <ChevronDown size={16}/></a></div>
@@ -101,7 +101,7 @@ function App() {
           <div className="filters" role="group" aria-label="Filtrar jogos">{([['all','Todos'],['played','Resultados'],['next','Por jogar']] as const).map(([key,label]) => <button className={matchFilter === key ? 'active' : ''} onClick={() => setMatchFilter(key)} key={key}>{label}</button>)}</div>
           <div className="match-list">{matches.length ? matches.map(match => <article className="match-row" key={match.id}><span className="round">J{match.round}</span><span className="date">{formatMatchDate(match.date)}</span><div><b>{match.home}</b><small>{match.away}</small></div><strong className="score">{match.homeScore === null ? '—' : `${match.homeScore}–${match.awayScore}`}</strong>{match.videoId && <a href={content.videos.find(v => v.id === match.videoId)?.url} target="_blank" rel="noreferrer">Vídeo</a>}</article>) : <div className="empty-state"><CircleAlert/>Ainda não há jogos nesta categoria.</div>}</div>
           {!content.videos.length && <p className="video-empty">Vídeos Sport.Video entram aqui assim que houver endereço confirmado.</p>}
-        </div><aside className="standings"><h3>Classificação 2026/27</h3>{official.standings.length ? official.standings.map(s => <div key={s.team}><b>{s.position}</b><span>{s.team}</span><strong>{s.points}</strong></div>) : <div className="empty-state compact"><Clock3/><p>A tabela aquece depois do apito inicial.</p></div>}<a href={links.mygol} target="_blank" rel="noreferrer">Ver classificação oficial <ArrowUpRight size={14}/></a></aside></div>
+        </div><aside className="standings"><h3>Classificação · 1.ª época 2026/27</h3>{official.standings.length ? official.standings.map(s => <div key={s.team}><b>{s.position}</b><span>{s.team}</span><strong>{s.points}</strong></div>) : <div className="empty-state compact"><Clock3/><p>A tabela aquece depois do apito inicial.</p></div>}<a href={links.mygol} target="_blank" rel="noreferrer">Ver classificação oficial <ArrowUpRight size={14}/></a></aside></div>
         <p className="sync-note">Fonte: MyGol · {official.syncedAt ? `sincronizado ${new Date(official.syncedAt).toLocaleDateString('pt-PT')}` : 'calendário editorial em cache'}</p>
       </section>
 
