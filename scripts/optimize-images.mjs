@@ -7,6 +7,7 @@ const jobs = [
   ['team-01.jpg', 'team-01.webp', 1800],
   ['team-02.jpg', 'team-02.webp', 1800],
   ['kit-preview.jpeg', 'kit-preview.webp', 1000],
+  ['matchday-new-kit.jpg', 'matchday-new-kit.webp', 1000],
   ['francis-logo-proposal.jpeg', 'francis-logo-proposal.webp', 1200],
 ]
 

@@ -2,7 +2,16 @@ export interface Player { id: string; name: string; nickname?: string; number: n
 export interface CareerHighlight { id: string; title: string; season: string; summary: string; record?: string; mvp?: string; url?: string }
 export interface GalleryItem { id: string; title: string; caption: string; image: string; alt: string; url: string }
 export interface Availability { playerId: string; status: 'available' | 'injured' | 'suspended'; note: string; since?: string }
-export interface NewsItem { id: string; date: string; title: string; summary: string; category: string; image?: string }
+export interface NewsItem {
+  id: string
+  date: string
+  title: string
+  summary: string
+  category: string
+  image?: string
+  squad?: string[]
+  match?: { opponent: string; kickoff: string; venue: string }
+}
 export interface Match { id: string; round: number; date: string | null; home: string; away: string; homeScore: number | null; awayScore: number | null; venue?: string; videoId?: string }
 export interface PlayerStats { playerId: string; appearances: number; goals: number; assists: number; yellowCards: number; redCards: number }
 export interface Lineup { matchId: string | null; playerIds: string[] }
