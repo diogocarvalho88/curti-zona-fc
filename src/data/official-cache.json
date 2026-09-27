@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-09-27T21:56:58.485Z",
+  "syncedAt": "2026-09-27T22:37:51.660Z",
   "source": "https://apminifootball.mygol.es/api/teams/9157/details/742",
   "matches": [
     {
@@ -146,6 +146,28 @@
   "standings": [
     {
       "position": 1,
+      "team": "Estrelas FC",
+      "played": 1,
+      "wins": 1,
+      "draws": 0,
+      "losses": 0,
+      "goalsFor": 7,
+      "goalsAgainst": 1,
+      "points": 3
+    },
+    {
+      "position": 2,
+      "team": "Calmex FC",
+      "played": 1,
+      "wins": 1,
+      "draws": 0,
+      "losses": 0,
+      "goalsFor": 6,
+      "goalsAgainst": 1,
+      "points": 3
+    },
+    {
+      "position": 3,
       "team": "La Weed Squadra",
       "played": 1,
       "wins": 1,
@@ -156,73 +178,29 @@
       "points": 3
     },
     {
-      "position": 2,
-      "team": "ACMI",
-      "played": 0,
-      "wins": 0,
-      "draws": 0,
-      "losses": 0,
-      "goalsFor": 0,
-      "goalsAgainst": 0,
-      "points": 0
-    },
-    {
-      "position": 3,
-      "team": "Calmex FC",
-      "played": 0,
-      "wins": 0,
-      "draws": 0,
-      "losses": 0,
-      "goalsFor": 0,
-      "goalsAgainst": 0,
-      "points": 0
-    },
-    {
       "position": 4,
       "team": "Curti Zona FC",
-      "played": 0,
+      "played": 1,
       "wins": 0,
-      "draws": 0,
+      "draws": 1,
       "losses": 0,
-      "goalsFor": 0,
-      "goalsAgainst": 0,
-      "points": 0
+      "goalsFor": 2,
+      "goalsAgainst": 2,
+      "points": 1
     },
     {
       "position": 5,
-      "team": "Eleven K",
-      "played": 0,
+      "team": "Jameson FC",
+      "played": 1,
       "wins": 0,
-      "draws": 0,
+      "draws": 1,
       "losses": 0,
-      "goalsFor": 0,
-      "goalsAgainst": 0,
-      "points": 0
+      "goalsFor": 2,
+      "goalsAgainst": 2,
+      "points": 1
     },
     {
       "position": 6,
-      "team": "Estrelas FC",
-      "played": 0,
-      "wins": 0,
-      "draws": 0,
-      "losses": 0,
-      "goalsFor": 0,
-      "goalsAgainst": 0,
-      "points": 0
-    },
-    {
-      "position": 7,
-      "team": "Jameson FC",
-      "played": 0,
-      "wins": 0,
-      "draws": 0,
-      "losses": 0,
-      "goalsFor": 0,
-      "goalsAgainst": 0,
-      "points": 0
-    },
-    {
-      "position": 8,
       "team": "CD Póvoa de Santo Adrião",
       "played": 1,
       "wins": 0,
@@ -230,6 +208,28 @@
       "losses": 1,
       "goalsFor": 2,
       "goalsAgainst": 3,
+      "points": 0
+    },
+    {
+      "position": 7,
+      "team": "ACMI",
+      "played": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 1,
+      "goalsFor": 1,
+      "goalsAgainst": 6,
+      "points": 0
+    },
+    {
+      "position": 8,
+      "team": "Eleven K",
+      "played": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 1,
+      "goalsFor": 1,
+      "goalsAgainst": 7,
       "points": 0
     }
   ],
@@ -242,6 +242,15 @@
       "assists": 0,
       "yellowCards": 1,
       "redCards": 1
+    },
+    {
+      "playerId": "andre",
+      "playerName": "André Lopes",
+      "appearances": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellowCards": 1,
+      "redCards": 0
     },
     {
       "playerId": "mygol-39902",
@@ -283,5 +292,623 @@
   "lineup": {
     "matchId": null,
     "playerIds": []
-  }
+  },
+  "leagueMatches": [
+    {
+      "id": "league-1-1",
+      "round": 1,
+      "date": "2026-09-27T18:00:00+01:00",
+      "home": "La Weed Squadra",
+      "away": "CD Póvoa de Santo Adrião",
+      "homeScore": 3,
+      "awayScore": 2,
+      "venue": "Complexo Desportivo Alto do Lumiar - Campo 1",
+      "status": 5
+    },
+    {
+      "id": "league-1-2",
+      "round": 1,
+      "date": "2026-09-27T19:00:00+01:00",
+      "home": "Curti Zona FC",
+      "away": "Jameson FC",
+      "homeScore": 2,
+      "awayScore": 2,
+      "venue": "Complexo Desportivo Alto do Lumiar - Campo 1",
+      "status": 4
+    },
+    {
+      "id": "league-1-3",
+      "round": 1,
+      "date": "2026-09-27T20:00:00+01:00",
+      "home": "Calmex FC",
+      "away": "ACMI",
+      "homeScore": 6,
+      "awayScore": 1,
+      "venue": "Complexo Desportivo Alto do Lumiar - Campo 1",
+      "status": 3
+    },
+    {
+      "id": "league-1-4",
+      "round": 1,
+      "date": "2026-09-27T21:00:00+01:00",
+      "home": "Estrelas FC",
+      "away": "Eleven K",
+      "homeScore": 7,
+      "awayScore": 1,
+      "venue": "Complexo Desportivo Alto do Lumiar - Campo 1",
+      "status": 5
+    },
+    {
+      "id": "league-2-1",
+      "round": 2,
+      "date": "2026-10-04T18:00:00+01:00",
+      "home": "ACMI",
+      "away": "La Weed Squadra",
+      "homeScore": null,
+      "awayScore": null,
+      "venue": "Complexo Desportivo Alto do Lumiar - Campo 1",
+      "status": 1
+    },
+    {
+      "id": "league-2-2",
+      "round": 2,
+      "date": "2026-10-04T19:00:00+01:00",
+      "home": "CD Póvoa de Santo Adrião",
+      "away": "Curti Zona FC",
+      "homeScore": null,
+      "awayScore": null,
+      "venue": "Complexo Desportivo Alto do Lumiar - Campo 1",
+      "status": 1
+    },
+    {
+      "id": "league-2-3",
+      "round": 2,
+      "date": "2026-10-04T20:00:00+01:00",
+      "home": "Eleven K",
+      "away": "Calmex FC",
+      "homeScore": null,
+      "awayScore": null,
+      "venue": "Complexo Desportivo Alto do Lumiar - Campo 1",
+      "status": 1
+    },
+    {
+      "id": "league-2-4",
+      "round": 2,
+      "date": "2026-10-04T21:00:00+01:00",
+      "home": "Jameson FC",
+      "away": "Estrelas FC",
+      "homeScore": null,
+      "awayScore": null,
+      "venue": "Complexo Desportivo Alto do Lumiar - Campo 1",
+      "status": 1
+    },
+    {
+      "id": "league-3-1",
+      "round": 3,
+      "date": "2026-10-18T18:00:00+01:00",
+      "home": "ACMI",
+      "away": "Eleven K",
+      "homeScore": null,
+      "awayScore": null,
+      "venue": "Complexo Desportivo Alto do Lumiar - Campo 1",
+      "status": 1
+    },
+    {
+      "id": "league-3-2",
+      "round": 3,
+      "date": "2026-10-18T19:00:00+01:00",
+      "home": "La Weed Squadra",
+      "away": "Curti Zona FC",
+      "homeScore": null,
+      "awayScore": null,
+      "venue": "Complexo Desportivo Alto do Lumiar - Campo 1",
+      "status": 1
+    },
+    {
+      "id": "league-3-3",
+      "round": 3,
+      "date": "2026-10-18T20:00:00+01:00",
+      "home": "Estrelas FC",
+      "away": "CD Póvoa de Santo Adrião",
+      "homeScore": null,
+      "awayScore": null,
+      "venue": "Complexo Desportivo Alto do Lumiar - Campo 1",
+      "status": 1
+    },
+    {
+      "id": "league-3-4",
+      "round": 3,
+      "date": "2026-10-18T21:00:00+01:00",
+      "home": "Calmex FC",
+      "away": "Jameson FC",
+      "homeScore": null,
+      "awayScore": null,
+      "venue": "Complexo Desportivo Alto do Lumiar - Campo 1",
+      "status": 1
+    },
+    {
+      "id": "league-4-1",
+      "round": 4,
+      "date": "2026-10-25T18:00:00+00:00",
+      "home": "Jameson FC",
+      "away": "ACMI",
+      "homeScore": null,
+      "awayScore": null,
+      "venue": "Complexo Desportivo Alto do Lumiar - Campo 1",
+      "status": 1
+    },
+    {
+      "id": "league-4-2",
+      "round": 4,
+      "date": "2026-10-25T19:00:00+00:00",
+      "home": "Eleven K",
+      "away": "La Weed Squadra",
+      "homeScore": null,
+      "awayScore": null,
+      "venue": "Complexo Desportivo Alto do Lumiar - Campo 1",
+      "status": 1
+    },
+    {
+      "id": "league-4-3",
+      "round": 4,
+      "date": "2026-10-25T20:00:00+00:00",
+      "home": "Curti Zona FC",
+      "away": "Estrelas FC",
+      "homeScore": null,
+      "awayScore": null,
+      "venue": "Complexo Desportivo Alto do Lumiar - Campo 1",
+      "status": 1
+    },
+    {
+      "id": "league-4-4",
+      "round": 4,
+      "date": "2026-10-25T21:00:00+00:00",
+      "home": "CD Póvoa de Santo Adrião",
+      "away": "Calmex FC",
+      "homeScore": null,
+      "awayScore": null,
+      "venue": "Complexo Desportivo Alto do Lumiar - Campo 1",
+      "status": 1
+    },
+    {
+      "id": "league-5-1",
+      "round": 5,
+      "date": "2026-11-08T18:00:00+00:00",
+      "home": "Eleven K",
+      "away": "Jameson FC",
+      "homeScore": null,
+      "awayScore": null,
+      "venue": "Complexo Desportivo Alto do Lumiar - Campo 1",
+      "status": 1
+    },
+    {
+      "id": "league-5-2",
+      "round": 5,
+      "date": "2026-11-08T19:00:00+00:00",
+      "home": "ACMI",
+      "away": "CD Póvoa de Santo Adrião",
+      "homeScore": null,
+      "awayScore": null,
+      "venue": "Complexo Desportivo Alto do Lumiar - Campo 1",
+      "status": 1
+    },
+    {
+      "id": "league-5-3",
+      "round": 5,
+      "date": "2026-11-08T20:00:00+00:00",
+      "home": "Calmex FC",
+      "away": "Curti Zona FC",
+      "homeScore": null,
+      "awayScore": null,
+      "venue": "Complexo Desportivo Alto do Lumiar - Campo 1",
+      "status": 1
+    },
+    {
+      "id": "league-5-4",
+      "round": 5,
+      "date": "2026-11-08T21:00:00+00:00",
+      "home": "La Weed Squadra",
+      "away": "Estrelas FC",
+      "homeScore": null,
+      "awayScore": null,
+      "venue": "Complexo Desportivo Alto do Lumiar - Campo 1",
+      "status": 1
+    },
+    {
+      "id": "league-6-1",
+      "round": 6,
+      "date": "2026-11-15T18:00:00+00:00",
+      "home": "Curti Zona FC",
+      "away": "ACMI",
+      "homeScore": null,
+      "awayScore": null,
+      "venue": "Complexo Desportivo Alto do Lumiar - Campo 1",
+      "status": 1
+    },
+    {
+      "id": "league-6-2",
+      "round": 6,
+      "date": "2026-11-15T19:00:00+00:00",
+      "home": "CD Póvoa de Santo Adrião",
+      "away": "Eleven K",
+      "homeScore": null,
+      "awayScore": null,
+      "venue": "Complexo Desportivo Alto do Lumiar - Campo 1",
+      "status": 1
+    },
+    {
+      "id": "league-6-3",
+      "round": 6,
+      "date": "2026-11-15T20:00:00+00:00",
+      "home": "La Weed Squadra",
+      "away": "Jameson FC",
+      "homeScore": null,
+      "awayScore": null,
+      "venue": "Complexo Desportivo Alto do Lumiar - Campo 1",
+      "status": 1
+    },
+    {
+      "id": "league-6-4",
+      "round": 6,
+      "date": "2026-11-15T21:00:00+00:00",
+      "home": "Estrelas FC",
+      "away": "Calmex FC",
+      "homeScore": null,
+      "awayScore": null,
+      "venue": "Complexo Desportivo Alto do Lumiar - Campo 1",
+      "status": 1
+    },
+    {
+      "id": "league-7-1",
+      "round": 7,
+      "date": "2026-11-29T18:00:00+00:00",
+      "home": "Jameson FC",
+      "away": "CD Póvoa de Santo Adrião",
+      "homeScore": null,
+      "awayScore": null,
+      "venue": "Complexo Desportivo Alto do Lumiar - Campo 1",
+      "status": 1
+    },
+    {
+      "id": "league-7-2",
+      "round": 7,
+      "date": "2026-11-29T19:00:00+00:00",
+      "home": "Eleven K",
+      "away": "Curti Zona FC",
+      "homeScore": null,
+      "awayScore": null,
+      "venue": "Complexo Desportivo Alto do Lumiar - Campo 1",
+      "status": 1
+    },
+    {
+      "id": "league-7-3",
+      "round": 7,
+      "date": "2026-11-29T20:00:00+00:00",
+      "home": "ACMI",
+      "away": "Estrelas FC",
+      "homeScore": null,
+      "awayScore": null,
+      "venue": "Complexo Desportivo Alto do Lumiar - Campo 1",
+      "status": 1
+    },
+    {
+      "id": "league-7-4",
+      "round": 7,
+      "date": "2026-11-29T21:00:00+00:00",
+      "home": "Calmex FC",
+      "away": "La Weed Squadra",
+      "homeScore": null,
+      "awayScore": null,
+      "venue": "Complexo Desportivo Alto do Lumiar - Campo 1",
+      "status": 1
+    },
+    {
+      "id": "league-8-1",
+      "round": 8,
+      "date": "2026-12-06T18:00:00+00:00",
+      "home": "Jameson FC",
+      "away": "Curti Zona FC",
+      "homeScore": null,
+      "awayScore": null,
+      "venue": "Complexo Desportivo Alto do Lumiar - Campo 1",
+      "status": 1
+    },
+    {
+      "id": "league-8-2",
+      "round": 8,
+      "date": "2026-12-06T19:00:00+00:00",
+      "home": "ACMI",
+      "away": "Calmex FC",
+      "homeScore": null,
+      "awayScore": null,
+      "venue": "Complexo Desportivo Alto do Lumiar - Campo 1",
+      "status": 1
+    },
+    {
+      "id": "league-8-3",
+      "round": 8,
+      "date": "2026-12-06T20:00:00+00:00",
+      "home": "CD Póvoa de Santo Adrião",
+      "away": "La Weed Squadra",
+      "homeScore": null,
+      "awayScore": null,
+      "venue": "Complexo Desportivo Alto do Lumiar - Campo 1",
+      "status": 1
+    },
+    {
+      "id": "league-8-4",
+      "round": 8,
+      "date": "2026-12-06T21:00:00+00:00",
+      "home": "Eleven K",
+      "away": "Estrelas FC",
+      "homeScore": null,
+      "awayScore": null,
+      "venue": "Complexo Desportivo Alto do Lumiar - Campo 1",
+      "status": 1
+    },
+    {
+      "id": "league-9-1",
+      "round": 9,
+      "date": "2026-12-13T18:00:00+00:00",
+      "home": "La Weed Squadra",
+      "away": "ACMI",
+      "homeScore": null,
+      "awayScore": null,
+      "venue": "Complexo Desportivo Alto do Lumiar - Campo 1",
+      "status": 1
+    },
+    {
+      "id": "league-9-2",
+      "round": 9,
+      "date": "2026-12-13T19:00:00+00:00",
+      "home": "Curti Zona FC",
+      "away": "CD Póvoa de Santo Adrião",
+      "homeScore": null,
+      "awayScore": null,
+      "venue": "Complexo Desportivo Alto do Lumiar - Campo 1",
+      "status": 1
+    },
+    {
+      "id": "league-9-3",
+      "round": 9,
+      "date": "2026-12-13T20:00:00+00:00",
+      "home": "Calmex FC",
+      "away": "Eleven K",
+      "homeScore": null,
+      "awayScore": null,
+      "venue": "Complexo Desportivo Alto do Lumiar - Campo 1",
+      "status": 1
+    },
+    {
+      "id": "league-9-4",
+      "round": 9,
+      "date": "2026-12-13T21:00:00+00:00",
+      "home": "Estrelas FC",
+      "away": "Jameson FC",
+      "homeScore": null,
+      "awayScore": null,
+      "venue": "Complexo Desportivo Alto do Lumiar - Campo 1",
+      "status": 1
+    },
+    {
+      "id": "league-10-1",
+      "round": 10,
+      "date": "2027-01-10T18:00:00+00:00",
+      "home": "Eleven K",
+      "away": "ACMI",
+      "homeScore": null,
+      "awayScore": null,
+      "venue": "Complexo Desportivo Alto do Lumiar - Campo 1",
+      "status": 1
+    },
+    {
+      "id": "league-10-2",
+      "round": 10,
+      "date": "2027-01-10T19:00:00+00:00",
+      "home": "Curti Zona FC",
+      "away": "La Weed Squadra",
+      "homeScore": null,
+      "awayScore": null,
+      "venue": "Complexo Desportivo Alto do Lumiar - Campo 1",
+      "status": 1
+    },
+    {
+      "id": "league-10-3",
+      "round": 10,
+      "date": "2027-01-10T20:00:00+00:00",
+      "home": "CD Póvoa de Santo Adrião",
+      "away": "Estrelas FC",
+      "homeScore": null,
+      "awayScore": null,
+      "venue": "Complexo Desportivo Alto do Lumiar - Campo 1",
+      "status": 1
+    },
+    {
+      "id": "league-10-4",
+      "round": 10,
+      "date": "2027-01-10T21:00:00+00:00",
+      "home": "Jameson FC",
+      "away": "Calmex FC",
+      "homeScore": null,
+      "awayScore": null,
+      "venue": "Complexo Desportivo Alto do Lumiar - Campo 1",
+      "status": 1
+    },
+    {
+      "id": "league-11-1",
+      "round": 11,
+      "date": "2027-01-17T18:00:00+00:00",
+      "home": "La Weed Squadra",
+      "away": "Eleven K",
+      "homeScore": null,
+      "awayScore": null,
+      "venue": "Complexo Desportivo Alto do Lumiar - Campo 1",
+      "status": 1
+    },
+    {
+      "id": "league-11-2",
+      "round": 11,
+      "date": "2027-01-17T19:00:00+00:00",
+      "home": "ACMI",
+      "away": "Jameson FC",
+      "homeScore": null,
+      "awayScore": null,
+      "venue": "Complexo Desportivo Alto do Lumiar - Campo 1",
+      "status": 1
+    },
+    {
+      "id": "league-11-3",
+      "round": 11,
+      "date": "2027-01-17T20:00:00+00:00",
+      "home": "Estrelas FC",
+      "away": "Curti Zona FC",
+      "homeScore": null,
+      "awayScore": null,
+      "venue": "Complexo Desportivo Alto do Lumiar - Campo 1",
+      "status": 1
+    },
+    {
+      "id": "league-11-4",
+      "round": 11,
+      "date": "2027-01-17T21:00:00+00:00",
+      "home": "Calmex FC",
+      "away": "CD Póvoa de Santo Adrião",
+      "homeScore": null,
+      "awayScore": null,
+      "venue": "Complexo Desportivo Alto do Lumiar - Campo 1",
+      "status": 1
+    },
+    {
+      "id": "league-12-1",
+      "round": 12,
+      "date": "2027-01-24T18:00:00+00:00",
+      "home": "CD Póvoa de Santo Adrião",
+      "away": "ACMI",
+      "homeScore": null,
+      "awayScore": null,
+      "venue": "Complexo Desportivo Alto do Lumiar - Campo 1",
+      "status": 1
+    },
+    {
+      "id": "league-12-2",
+      "round": 12,
+      "date": "2027-01-24T19:00:00+00:00",
+      "home": "Jameson FC",
+      "away": "Eleven K",
+      "homeScore": null,
+      "awayScore": null,
+      "venue": "Complexo Desportivo Alto do Lumiar - Campo 1",
+      "status": 1
+    },
+    {
+      "id": "league-12-3",
+      "round": 12,
+      "date": "2027-01-24T20:00:00+00:00",
+      "home": "Curti Zona FC",
+      "away": "Calmex FC",
+      "homeScore": null,
+      "awayScore": null,
+      "venue": "Complexo Desportivo Alto do Lumiar - Campo 1",
+      "status": 1
+    },
+    {
+      "id": "league-12-4",
+      "round": 12,
+      "date": "2027-01-24T21:00:00+00:00",
+      "home": "Estrelas FC",
+      "away": "La Weed Squadra",
+      "homeScore": null,
+      "awayScore": null,
+      "venue": "Complexo Desportivo Alto do Lumiar - Campo 1",
+      "status": 1
+    },
+    {
+      "id": "league-13-1",
+      "round": 13,
+      "date": "2027-01-31T18:00:00+00:00",
+      "home": "ACMI",
+      "away": "Curti Zona FC",
+      "homeScore": null,
+      "awayScore": null,
+      "venue": "Complexo Desportivo Alto do Lumiar - Campo 1",
+      "status": 1
+    },
+    {
+      "id": "league-13-2",
+      "round": 13,
+      "date": "2027-01-31T19:00:00+00:00",
+      "home": "Eleven K",
+      "away": "CD Póvoa de Santo Adrião",
+      "homeScore": null,
+      "awayScore": null,
+      "venue": "Complexo Desportivo Alto do Lumiar - Campo 1",
+      "status": 1
+    },
+    {
+      "id": "league-13-3",
+      "round": 13,
+      "date": "2027-01-31T20:00:00+00:00",
+      "home": "Jameson FC",
+      "away": "La Weed Squadra",
+      "homeScore": null,
+      "awayScore": null,
+      "venue": "Complexo Desportivo Alto do Lumiar - Campo 1",
+      "status": 1
+    },
+    {
+      "id": "league-13-4",
+      "round": 13,
+      "date": "2027-01-31T21:00:00+00:00",
+      "home": "Calmex FC",
+      "away": "Estrelas FC",
+      "homeScore": null,
+      "awayScore": null,
+      "venue": "Complexo Desportivo Alto do Lumiar - Campo 1",
+      "status": 1
+    },
+    {
+      "id": "league-14-1",
+      "round": 14,
+      "date": "2027-02-07T18:00:00+00:00",
+      "home": "Curti Zona FC",
+      "away": "Eleven K",
+      "homeScore": null,
+      "awayScore": null,
+      "venue": "Complexo Desportivo Alto do Lumiar - Campo 1",
+      "status": 1
+    },
+    {
+      "id": "league-14-2",
+      "round": 14,
+      "date": "2027-02-07T19:00:00+00:00",
+      "home": "CD Póvoa de Santo Adrião",
+      "away": "Jameson FC",
+      "homeScore": null,
+      "awayScore": null,
+      "venue": "Complexo Desportivo Alto do Lumiar - Campo 1",
+      "status": 1
+    },
+    {
+      "id": "league-14-3",
+      "round": 14,
+      "date": "2027-02-07T20:00:00+00:00",
+      "home": "Estrelas FC",
+      "away": "ACMI",
+      "homeScore": null,
+      "awayScore": null,
+      "venue": "Complexo Desportivo Alto do Lumiar - Campo 1",
+      "status": 1
+    },
+    {
+      "id": "league-14-4",
+      "round": 14,
+      "date": "2027-02-07T21:00:00+00:00",
+      "home": "La Weed Squadra",
+      "away": "Calmex FC",
+      "homeScore": null,
+      "awayScore": null,
+      "venue": "Complexo Desportivo Alto do Lumiar - Campo 1",
+      "status": 1
+    }
+  ]
 }

@@ -69,6 +69,43 @@ export function parsePayload(payload: unknown): Partial<OfficialData> {
   return { ...(dayMatches.length ? { matches: dayMatches } : matches.length ? { matches } : {}), ...(standings.length ? { standings } : {}), ...(stats.length ? { stats } : {}) }
 }
 
+export function standingsFromMatches(matches: Match[]): Standing[] {
+  const teams = new Map<string, Omit<Standing, 'position'>>()
+  const row = (team: string) => {
+    const current = teams.get(team) || { team, played: 0, wins: 0, draws: 0, losses: 0, goalsFor: 0, goalsAgainst: 0, points: 0 }
+    teams.set(team, current)
+    return current
+  }
+  for (const match of matches) {
+    if (match.homeScore === null || match.awayScore === null) continue
+    const home = row(match.home)
+    const away = row(match.away)
+    home.played += 1
+    away.played += 1
+    home.goalsFor += match.homeScore
+    home.goalsAgainst += match.awayScore
+    away.goalsFor += match.awayScore
+    away.goalsAgainst += match.homeScore
+    if (match.homeScore > match.awayScore) {
+      home.wins += 1
+      away.losses += 1
+      home.points += 3
+    } else if (match.homeScore < match.awayScore) {
+      away.wins += 1
+      home.losses += 1
+      away.points += 3
+    } else {
+      home.draws += 1
+      away.draws += 1
+      home.points += 1
+      away.points += 1
+    }
+  }
+  return [...teams.values()]
+    .sort((a, b) => b.points - a.points || (b.goalsFor - b.goalsAgainst) - (a.goalsFor - a.goalsAgainst) || b.goalsFor - a.goalsFor || a.team.localeCompare(b.team, 'pt'))
+    .map((standing, index) => ({ ...standing, position: index + 1 }))
+}
+
 function lisbonDate(value: string) {
   if (/[zZ]|[+-]\d\d:\d\d$/.test(value)) return value
   const guess = new Date(`${value}Z`)
@@ -89,11 +126,12 @@ async function sync() {
   const cached = JSON.parse(await readFile(cachePath, 'utf8')) as OfficialData
   try {
     const endpoint = process.env.MYGOL_API_URL || TEAM_URL
-    const response = await fetch(endpoint, { headers: { 'user-agent': 'CurtiZonaFC-site/1.0' }, signal: AbortSignal.timeout(8_000) })
+    const response = await fetch(endpoint, { headers: { 'user-agent': 'CurtiZonaFC-site/1.0' }, signal: AbortSignal.timeout(20_000) })
     if (!response.ok) throw new Error(`HTTP ${response.status}`)
     const body = await response.text()
     const candidates = body.trim().startsWith('{') || body.trim().startsWith('[') ? [JSON.parse(body)] : payloadsFromHtml(body)
     const details = candidates[0] as Record<string, unknown> | undefined
+    let leagueMatches: Match[] | undefined
     if (!process.env.MYGOL_API_URL && details && Array.isArray(details.days)) {
       const days = details.days as Record<string, unknown>[]
       const firstMatch = ((days[0]?.matches as Record<string, unknown>[] | undefined)?.[0])
@@ -107,7 +145,7 @@ async function sync() {
         }
       }
       if (stageId) {
-        const tableResponse = await fetch(`https://apminifootball.mygol.es/api/tournaments/stageclassification/${stageId}`, { signal: AbortSignal.timeout(8_000) })
+        const tableResponse = await fetch(`https://apminifootball.mygol.es/api/tournaments/stageclassification/${stageId}`, { signal: AbortSignal.timeout(20_000) })
         if (tableResponse.ok) {
           const table = await tableResponse.json() as { leagueClassification?: Record<string, unknown>[] }
           details.standings = (table.leagueClassification || []).map((row, index) => ({
@@ -115,6 +153,38 @@ async function sync() {
             played: row.gamesPlayed, wins: row.gamesWon, draws: row.gamesDraw, losses: row.gamesLost,
             goalsFor: row.points, goalsAgainst: row.pointsAgainst, points: row.tournamentPoints,
           }))
+        }
+      }
+      const tournamentId = number(firstMatch?.idTournament)
+      if (tournamentId) {
+        const calendarResponse = await fetch(`https://apminifootball.mygol.es/api/matches/fortournament/${tournamentId}`, { signal: AbortSignal.timeout(20_000) })
+        if (calendarResponse.ok) {
+          const calendar = await calendarResponse.json() as Record<string, unknown>[]
+          leagueMatches = calendar.flatMap((day, dayIndex) => {
+            const round = number(day.sequenceOrder) ?? dayIndex + 1
+            return ((day.matches as Record<string, unknown>[] | undefined) || []).flatMap((match, matchIndex) => {
+              const home = teamNames.get(number(match.idHomeTeam) || 0)
+              const away = teamNames.get(number(match.idVisitorTeam) || 0)
+              if (!home || !away) return []
+              const status = number(match.status) ?? 0
+              const dateValue = text(match.startTime)
+              return [{
+                id: text(match.id) || `league-${round}-${matchIndex + 1}`,
+                round,
+                date: dateValue ? lisbonDate(dateValue) : null,
+                home,
+                away,
+                homeScore: status <= 1 ? null : number(match.visibleHomeScore ?? match.homeScore),
+                awayScore: status <= 1 ? null : number(match.visibleVisitorScore ?? match.visitorScore),
+                venue: text((match.field as Record<string, unknown> | undefined)?.name) || undefined,
+                status,
+              }]
+            })
+          })
+          const provisional = standingsFromMatches(leagueMatches)
+          const officialPlayed = ((details.standings as Standing[] | undefined) || []).reduce((sum, standing) => sum + standing.played, 0)
+          const provisionalPlayed = provisional.reduce((sum, standing) => sum + standing.played, 0)
+          if (provisionalPlayed > officialPlayed) details.standings = provisional
         }
       }
       const playerIds: Record<string, string> = {
@@ -129,7 +199,8 @@ async function sync() {
         const appearances = number(summary?.gamesPlayed) ?? 0
         const goals = number(summary?.points) ?? 0
         const assists = number(summary?.assistances) ?? 0
-        const yellowCards = number(summary?.cardsType1) ?? 0
+        const manualYellowCards: Record<string, number> = { 'André Lopes': 1 }
+        const yellowCards = Math.max(number(summary?.cardsType1) ?? 0, manualYellowCards[playerName] ?? 0)
         const redCards = number(summary?.cardsType2) ?? 0
         if (appearances + goals + assists + yellowCards + redCards === 0) return []
         return [{ playerId: id, playerName, appearances, goals, assists, yellowCards, redCards }]
@@ -137,7 +208,7 @@ async function sync() {
     }
     const parsed = candidates.map(parsePayload).reduce((acc, item) => ({ ...acc, ...item }), {})
     if (!parsed.matches && !parsed.standings && !parsed.stats) throw new Error('formato MyGol não reconhecido')
-    const next: OfficialData = { ...cached, ...parsed, syncedAt: new Date().toISOString(), source: endpoint }
+    const next: OfficialData = { ...cached, ...parsed, ...(leagueMatches ? { leagueMatches } : {}), syncedAt: new Date().toISOString(), source: endpoint }
     await writeFile(cachePath, `${JSON.stringify(next, null, 2)}\n`)
     console.log(`MyGol: cache atualizado (${next.matches.length} jogos).`)
   } catch (error) {

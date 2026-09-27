@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { parsePayload } from './sync-mygol'
+import { parsePayload, standingsFromMatches } from './sync-mygol'
 
 describe('MyGol parser', () => {
   it('normalizes matches, standings and stats', () => {
@@ -9,4 +9,12 @@ describe('MyGol parser', () => {
     expect(result.stats?.[0].goals).toBe(2)
   })
   it('does not replace data when shapes are unknown', () => expect(parsePayload({ hello: 'world' })).toEqual({}))
+  it('builds a provisional table from the latest scores', () => {
+    const table = standingsFromMatches([
+      { id: '1', round: 1, date: null, home: 'Curti Zona FC', away: 'Jameson FC', homeScore: 2, awayScore: 2 },
+      { id: '2', round: 1, date: null, home: 'Estrelas FC', away: 'Eleven K', homeScore: 7, awayScore: 1 },
+    ])
+    expect(table[0]).toMatchObject({ team: 'Estrelas FC', points: 3, goalsFor: 7, goalsAgainst: 1 })
+    expect(table.find(row => row.team === 'Curti Zona FC')).toMatchObject({ played: 1, draws: 1, points: 1 })
+  })
 })

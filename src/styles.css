@@ -64,4 +64,28 @@ img.logo-small{width:44px;height:44px;filter:none}
 @media(max-width:900px){.callup-list{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:600px){.detail-back{font-size:9px;margin-right:12px}.news-detail{padding-top:55px}.callup-news{display:flex;flex-direction:column;grid-column:auto;min-height:0;overflow:hidden}.callup-news>.news-image{height:260px;min-height:0;flex:0 0 260px}.callup-news>.news-image img{height:100%;object-fit:cover;object-position:center 68%}.callup-news .news-art{height:130px;min-height:0}.callup-art>strong{font-size:86px}.callup-news .news-copy{width:100%;flex:0 0 auto;padding:22px;background:var(--ink);color:var(--paper)}.news-match{align-items:flex-start;flex-direction:column;gap:5px}.news-match>span{text-align:left}.callup-list{grid-template-columns:repeat(2,1fr)}}
 
-.stats>div:not(.empty-state){grid-template-columns:1fr repeat(4,42px)}
+.stats>div:not(.empty-state){grid-template-columns:1fr repeat(4,42px);gap:3px}
+
+/* Jornada completa, classificação detalhada e balanço da época */
+.standings{overflow-x:auto}
+.standings>div.standings-table{display:block;padding:0;border:0;min-width:430px}
+.standings-table>div{display:grid;grid-template-columns:24px minmax(125px,1fr) repeat(5,27px) 34px;align-items:center;padding:10px 0;border-bottom:1px solid #302f29;font-size:11px}
+.standings-table i{font-style:normal;text-align:center;color:#aaa596}
+.standings-table strong{text-align:right}
+.standings-table .standings-head{color:#777367;text-transform:uppercase;font-size:8px;letter-spacing:.08em}
+.standings-table .curti-row{background:rgba(213,168,47,.14);margin:0 -8px;padding-left:8px;padding-right:8px;color:var(--gold)}
+.standings>small{display:block;color:#8f8b7f;font-size:9px;line-height:1.5;margin-top:14px}
+.round-results{margin-top:34px;background:#d8cbaa;padding:24px}
+.subsection-title{display:flex;align-items:end;justify-content:space-between;margin-bottom:16px}
+.subsection-title .eyebrow{margin-bottom:6px}
+.subsection-title h3{font:600 25px Oswald;text-transform:uppercase;margin:0}
+.subsection-title>span{font-size:9px;text-transform:uppercase;color:var(--muted);letter-spacing:.1em}
+.round-results article{display:grid;grid-template-columns:115px 1fr 55px 1fr;align-items:center;gap:12px;padding:13px 10px;border-top:1px solid var(--line);font-size:12px}
+.round-results article time{font-size:9px;color:var(--muted);text-transform:uppercase}
+.round-results article span:last-child{text-align:right}
+.round-results article strong{text-align:center;font:600 20px Oswald}
+.round-results .curti-match{background:var(--gold);font-weight:700}
+.summary-numbers{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.summary-numbers span{background:#e8dfca;padding:14px 8px;text-align:center;font-size:9px;text-transform:uppercase;color:var(--muted)}
+.summary-numbers b{display:block;font:600 29px Oswald;color:var(--ink);margin-bottom:3px}
+@media(max-width:600px){.round-results{padding:18px 12px}.subsection-title>span{display:none}.round-results article{grid-template-columns:1fr 48px 1fr;gap:8px}.round-results article time{grid-column:1/-1}.standings{margin:0 -2px;padding:22px 16px}.summary-numbers{grid-template-columns:repeat(2,1fr)}}
