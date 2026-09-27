@@ -11,6 +11,7 @@ export interface NewsItem {
   image?: string
   squad?: string[]
   match?: { opponent: string; kickoff: string; venue: string }
+  notice?: string
 }
 export interface Match { id: string; round: number; date: string | null; home: string; away: string; homeScore: number | null; awayScore: number | null; venue?: string; videoId?: string }
 export interface PlayerStats { playerId: string; appearances: number; goals: number; assists: number; yellowCards: number; redCards: number }
