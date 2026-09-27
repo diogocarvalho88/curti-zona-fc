@@ -62,7 +62,7 @@ export function parsePayload(payload: unknown): Partial<OfficialData> {
 
   const rawStats = all.filter(o => ('playerId' in o || 'player_id' in o) && ('goals' in o || 'assists' in o))
   const stats: PlayerStats[] = rawStats.map(o => ({
-    playerId: text(o.playerId ?? o.player_id), appearances: number(o.appearances ?? o.played) ?? 0,
+    playerId: text(o.playerId ?? o.player_id), playerName: text(o.playerName ?? o.player_name) || undefined, appearances: number(o.appearances ?? o.played) ?? 0,
     goals: number(o.goals) ?? 0, assists: number(o.assists) ?? 0,
     yellowCards: number(o.yellowCards ?? o.yellow_cards) ?? 0, redCards: number(o.redCards ?? o.red_cards) ?? 0,
   })).filter(s => s.playerId)
@@ -123,11 +123,16 @@ async function sync() {
         'Jorge Ambrósio': 'jorge', 'Filipe Campos': 'filipe', 'João Figueira': 'jonicas',
       }
       details.stats = ((details.players as Record<string, unknown>[] | undefined) || []).flatMap(player => {
-        const id = playerIds[`${text(player.name)} ${text(player.surname)}`]
-        if (!id) return []
+        const playerName = `${text(player.name)} ${text(player.surname)}`
+        const id = playerIds[playerName] || `mygol-${number(player.id) ?? playerName.toLowerCase().replace(/\s+/g, '-')}`
         const summary = player.dayResultSummary as Record<string, unknown> | undefined
-        if ((number(summary?.gamesPlayed) ?? 0) === 0) return []
-        return [{ playerId: id, appearances: summary?.gamesPlayed, goals: summary?.points, assists: summary?.assistances, yellowCards: summary?.cardsType1, redCards: summary?.cardsType2 }]
+        const appearances = number(summary?.gamesPlayed) ?? 0
+        const goals = number(summary?.points) ?? 0
+        const assists = number(summary?.assistances) ?? 0
+        const yellowCards = number(summary?.cardsType1) ?? 0
+        const redCards = number(summary?.cardsType2) ?? 0
+        if (appearances + goals + assists + yellowCards + redCards === 0) return []
+        return [{ playerId: id, playerName, appearances, goals, assists, yellowCards, redCards }]
       })
     }
     const parsed = candidates.map(parsePayload).reduce((acc, item) => ({ ...acc, ...item }), {})

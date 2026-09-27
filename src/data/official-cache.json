@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-09-27T12:12:24.006Z",
+  "syncedAt": "2026-09-27T21:56:17.112Z",
   "source": "https://apminifootball.mygol.es/api/teams/9157/details/742",
   "matches": [
     {
@@ -8,8 +8,8 @@
       "date": "2026-09-27T19:00:00+01:00",
       "home": "Curti Zona FC",
       "away": "Jameson FC",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 2,
+      "awayScore": 2,
       "venue": "Complexo Desportivo Alto do Lumiar - Campo 1"
     },
     {
@@ -146,6 +146,17 @@
   "standings": [
     {
       "position": 1,
+      "team": "La Weed Squadra",
+      "played": 1,
+      "wins": 1,
+      "draws": 0,
+      "losses": 0,
+      "goalsFor": 3,
+      "goalsAgainst": 2,
+      "points": 3
+    },
+    {
+      "position": 2,
       "team": "ACMI",
       "played": 0,
       "wins": 0,
@@ -156,19 +167,8 @@
       "points": 0
     },
     {
-      "position": 2,
-      "team": "Calmex FC",
-      "played": 0,
-      "wins": 0,
-      "draws": 0,
-      "losses": 0,
-      "goalsFor": 0,
-      "goalsAgainst": 0,
-      "points": 0
-    },
-    {
       "position": 3,
-      "team": "CD Póvoa de Santo Adrião",
+      "team": "Calmex FC",
       "played": 0,
       "wins": 0,
       "draws": 0,
@@ -223,17 +223,63 @@
     },
     {
       "position": 8,
-      "team": "La Weed Squadra",
-      "played": 0,
+      "team": "CD Póvoa de Santo Adrião",
+      "played": 1,
       "wins": 0,
       "draws": 0,
-      "losses": 0,
-      "goalsFor": 0,
-      "goalsAgainst": 0,
+      "losses": 1,
+      "goalsFor": 2,
+      "goalsAgainst": 3,
       "points": 0
     }
   ],
-  "stats": [],
+  "stats": [
+    {
+      "playerId": "mygol-39112",
+      "playerName": "Mamadu Djaló",
+      "appearances": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellowCards": 1,
+      "redCards": 1
+    },
+    {
+      "playerId": "mygol-39902",
+      "playerName": "João Almeida",
+      "appearances": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellowCards": 1,
+      "redCards": 0
+    },
+    {
+      "playerId": "peyroteo",
+      "playerName": "Bruno Correia",
+      "appearances": 0,
+      "goals": 1,
+      "assists": 0,
+      "yellowCards": 0,
+      "redCards": 0
+    },
+    {
+      "playerId": "pedrinho",
+      "playerName": "Pedro Correia",
+      "appearances": 0,
+      "goals": 1,
+      "assists": 0,
+      "yellowCards": 1,
+      "redCards": 0
+    },
+    {
+      "playerId": "jorge",
+      "playerName": "Jorge Ambrósio",
+      "appearances": 0,
+      "goals": 0,
+      "assists": 1,
+      "yellowCards": 0,
+      "redCards": 0
+    }
+  ],
   "lineup": {
     "matchId": null,
     "playerIds": []
