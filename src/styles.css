@@ -36,12 +36,13 @@ img.logo-small{width:44px;height:44px;filter:none}
 .news-image img{width:100%;height:100%;display:block;object-fit:cover}
 .news-card.rejected-logo .news-image img{object-fit:contain;background:#f2f2f2}
 .news-image>span{position:absolute;left:14px;bottom:14px;background:var(--orange);color:white;padding:7px 10px;font:700 9px Oswald;letter-spacing:.12em;transform:rotate(-2deg)}
-.news-card.new-kit .news-image img{object-position:center 68%}
 @media(max-width:600px){.team-photos{grid-template-columns:1fr}.team-photos img{height:240px}.team-photos figure:nth-child(2){display:none}.instagram-archive{padding:22px}.archive-heading{align-items:flex-start;flex-direction:column}.instagram-grid{grid-template-columns:1fr}.instagram-grid>a{aspect-ratio:4/3}}
 
 /* Matchday call-up */
 .callup-news{display:grid;grid-template-columns:180px 1fr;background:var(--ink);color:var(--paper);border-color:var(--ink)}
 .callup-news .news-art{height:auto;min-height:100%;align-items:flex-start;justify-content:space-between;flex-direction:column;background:var(--gold);color:var(--ink)}
+.callup-news>.news-image{height:auto;min-height:100%}
+.callup-news>.news-image img{object-position:center 68%}
 .callup-art>strong{font:700 118px/.8 Oswald;letter-spacing:-.08em;align-self:flex-end}
 .callup-news .news-copy{padding:28px 30px}
 .callup-news .news-copy>.news-meta{display:flex;justify-content:space-between;color:#aaa596;font-size:9px;text-transform:uppercase;letter-spacing:.1em}
