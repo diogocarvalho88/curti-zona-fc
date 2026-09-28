@@ -17,7 +17,7 @@ const links = {
 }
 
 function Logo({ compact = false }: { compact?: boolean }) {
-  return <img className={`logo ${compact ? 'logo-small' : ''}`} src="/curti-zona-fc/images/official-logo.webp" alt="Curti Zona Futebol Clube" />
+  return <img className={`logo ${compact ? 'logo-small' : ''}`} src={`${import.meta.env.BASE_URL}images/official-logo.webp`} alt="Curti Zona Futebol Clube" />
 }
 
 function SectionHead({ eyebrow, title, copy }: { eyebrow: string; title: string; copy?: string }) {
@@ -97,7 +97,7 @@ function App() {
       <section className="section history" id="história">
         <SectionHead eyebrow="A NOSSA BULA" title="Resultados secundários incluem títulos." copy="Nascemos da bola entre amigos. Depois alguém começou a contar os pontos — e a coisa ficou séria." />
         <div className="origin-card"><p className="big-quote">“Da zona para a Liga.<br/>Sem perder o sotaque.”</p><div><p>A maioria do grupo tem raízes em <strong>CNX/LAV</strong> — embora nem todos venham de lá. É a geografia afetiva desta equipa: uma bola, um grupo e um plano que sobreviveu à noite anterior.</p><p>Entretanto, alguns concretizaram uma verdadeira <strong>subida na vida</strong> e moram agora na Linha de Sintra. Continuamos a deixá-los jogar.</p></div></div>
-        <div className="team-photos"><figure><img src="/curti-zona-fc/images/team-01.webp" alt="Fotografia oficial da equipa Curti Zona FC"/><figcaption>A família completa · 2026</figcaption></figure><figure><img src="/curti-zona-fc/images/team-02.webp" alt="Sete inicial do Curti Zona FC"/><figcaption>Sete pronto para jogo</figcaption></figure></div>
+        <div className="team-photos"><figure><img src={`${import.meta.env.BASE_URL}images/team-01.webp`} alt="Fotografia oficial da equipa Curti Zona FC"/><figcaption>A família completa · 2026</figcaption></figure><figure><img src={`${import.meta.env.BASE_URL}images/team-02.webp`} alt="Sete inicial do Curti Zona FC"/><figcaption>Sete pronto para jogo</figcaption></figure></div>
         <div className="instagram-archive"><div className="archive-heading"><div><p className="eyebrow">Arquivo visual</p><h3>Da época para o feed.</h3></div><a href={links.instagram} target="_blank" rel="noreferrer">Ver Instagram <ArrowUpRight size={14}/></a></div><div className="instagram-grid">{content.gallery.map(item => <a href={item.url} target="_blank" rel="noreferrer" key={item.id} aria-label={`${item.title} — abrir publicação no Instagram`}><img src={`${import.meta.env.BASE_URL}${item.image.replace(/^\//, '')}`} alt={item.alt} width="900" height="1125" loading="lazy"/><span><b>{item.title}</b><small>{item.caption}</small></span></a>)}</div></div>
         <div className="highlight-grid">{content.highlights.map((h, i) => <article className="highlight-card" key={h.id}><span className="index">0{i + 1}</span><Trophy size={25}/><p>{h.season}</p><h3>{h.title}</h3><strong>{h.record}</strong>{h.mvp && <b className="season-mvp">MVP · {h.mvp}</b>}<span>{h.summary}</span>{h.url && <a href={h.url} target="_blank" rel="noreferrer" aria-label={`Abrir a página oficial de ${h.title}`}>Página oficial <ArrowUpRight size={13}/></a>}</article>)}</div>
       </section>
