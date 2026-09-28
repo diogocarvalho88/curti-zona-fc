@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react'
-import { ArrowUpRight, Bone, CalendarDays, Camera, ChevronDown, CircleAlert, Clock3, ExternalLink, Goal, Heart, Menu, ShieldCheck, Shirt, Trophy, Users, X } from 'lucide-react'
+import { ArrowUpRight, Bone, CalendarDays, Camera, ChevronDown, CircleAlert, Clock3, ExternalLink, Goal, Heart, Menu, Play, ShieldCheck, Shirt, Trophy, Users, X } from 'lucide-react'
 import playersJson from './data/players.json'
 import contentJson from './data/content.json'
 import officialJson from './data/official-cache.json'
@@ -14,6 +14,7 @@ const links = {
   instagram: 'https://www.instagram.com/curti_zona_fc/',
   mygol: 'https://apminifootball.mygol.es/tournaments/742/teams/9157',
   cup: 'https://apminifootball.mygol.es/',
+  sportVideo: 'https://watch.sport.video/associacao-portuguesa-de-minifootball/teams/curti-zona-fc-none',
 }
 
 function Logo({ compact = false }: { compact?: boolean }) {
@@ -123,15 +124,21 @@ function App() {
         <div className="game-layout"><div>
           <div className="filters" role="group" aria-label="Filtrar jogos">{([['all','Todos'],['played','Resultados'],['next','Por jogar']] as const).map(([key,label]) => <button className={matchFilter === key ? 'active' : ''} onClick={() => setMatchFilter(key)} key={key}>{label}</button>)}</div>
           <div className="match-list">{matches.length ? matches.map(match => <article className="match-row" key={match.id}><span className="round">J{match.round}</span><span className="date">{formatMatchDate(match.date)}</span><div><b>{match.home}</b><small>{match.away}</small></div><strong className="score">{match.homeScore === null ? '—' : `${match.homeScore}–${match.awayScore}`}</strong>{match.videoId && <a href={content.videos.find(v => v.id === match.videoId)?.url} target="_blank" rel="noreferrer">Vídeo</a>}</article>) : <div className="empty-state"><CircleAlert/>Ainda não há jogos nesta categoria.</div>}</div>
-          {!content.videos.length && <p className="video-empty">Vídeos Sport.Video entram aqui assim que houver endereço confirmado.</p>}
           {roundMatches.length > 0 && <section className="round-results"><div className="subsection-title"><div><p className="eyebrow">SUPERLIGA LISBOA 2</p><h3>Resultados · Jornada {latestRound}</h3></div><span>Todos os jogos</span></div><div>{roundMatches.map(match => <article className={match.home === 'Curti Zona FC' || match.away === 'Curti Zona FC' ? 'curti-match' : ''} key={match.id}><time>{formatMatchDate(match.date)}</time><span>{match.home}</span><strong>{match.homeScore === null ? '—' : `${match.homeScore}–${match.awayScore}`}</strong><span>{match.away}</span></article>)}</div></section>}
         </div><aside className="standings"><h3>Classificação · 1.ª época 2026/27</h3>{official.standings.length ? <div className="standings-table"><div className="standings-head"><b>#</b><span>Equipa</span><i>J</i><i>V</i><i>E</i><i>D</i><i>DG</i><strong>Pts</strong></div>{official.standings.map(s => <div className={s.team === 'Curti Zona FC' ? 'curti-row' : ''} key={s.team}><b>{s.position}</b><span>{s.team}</span><i>{s.played}</i><i>{s.wins}</i><i>{s.draws}</i><i>{s.losses}</i><i>{s.goalsFor - s.goalsAgainst > 0 ? '+' : ''}{s.goalsFor - s.goalsAgainst}</i><strong>{s.points}</strong></div>)}</div> : <div className="empty-state compact"><Clock3/><p>A tabela aquece depois do apito inicial.</p></div>}<small>Classificação provisória enquanto o MyGol valida a jornada.</small><a href={links.mygol} target="_blank" rel="noreferrer">Ver classificação oficial <ArrowUpRight size={14}/></a></aside></div>
+        <section className="match-media" id="videos" aria-labelledby="videos-heading">
+          <div className="subsection-title"><div><p className="eyebrow">ZONA TV</p><h3 id="videos-heading">Lances &amp; microfones</h3></div><a href={links.sportVideo} target="_blank" rel="noreferrer">Todos os jogos na Sport.Video <ArrowUpRight size={14}/></a></div>
+          <div className="media-grid">{content.videos.map(video => <article className="media-card" key={video.id}>
+            {video.kind === 'interview' ? <video controls preload="none" poster={`${import.meta.env.BASE_URL}${video.poster?.replace(/^\//, '')}`} aria-label={video.title}><source src={`${import.meta.env.BASE_URL}${video.url.replace(/^\//, '')}`} type="video/mp4" />O teu navegador não suporta este vídeo.</video> : <a className="media-link" href={video.url} target="_blank" rel="noreferrer" aria-label={`Ver ${video.title} na Sport.Video`}><Play size={40} fill="currentColor" aria-hidden="true"/><span>Ver highlight <ArrowUpRight size={16}/></span></a>}
+            <div className="media-caption"><span>{video.kind === 'interview' ? 'FLASH INTERVIEW' : 'HIGHLIGHT'} · {video.season}</span><h4>{video.title}</h4></div>
+          </article>)}</div>
+        </section>
         <p className="sync-note">Fonte: MyGol · {official.syncedAt ? `sincronizado ${new Date(official.syncedAt).toLocaleDateString('pt-PT')}` : 'calendário editorial em cache'}</p>
       </section>
 
       <section className="section performance">
         <SectionHead eyebrow="ÁREA DESPORTIVA" title="A folha do mister." />
-        <div className="performance-grid"><article className="season-summary"><h3>Balanço da época</h3>{curtiStanding ? <div className="summary-numbers"><span><b>{curtiStanding.played}</b>Jogos</span><span><b>{curtiStanding.wins}</b>Vitórias</span><span><b>{curtiStanding.draws}</b>Empates</span><span><b>{curtiStanding.losses}</b>Derrotas</span><span><b>{curtiStanding.goalsFor}</b>Golos</span><span><b>{curtiStanding.goalsAgainst}</b>Sofridos</span></div> : <div className="empty-state"><Goal/><p>A época ainda está a aquecer.</p></div>}</article>
+        <div className="performance-grid"><article className="season-summary"><h3>Balanço da época</h3>{curtiStanding ? <div className="summary-numbers"><span><b>{curtiStanding.played}</b>Jogos</span><span><b>{curtiStanding.wins}</b>Vitórias</span><span><b>{curtiStanding.draws}</b>Empates</span><span><b>{curtiStanding.losses}</b>Derrotas</span><span><b>{curtiStanding.goalsFor}</b>Golos</span><span><b>{curtiStanding.goalsAgainst}</b>Sofridos</span><span><b>{content.videos.filter(v => v.kind === 'interview' && v.season === '2026/27').length}</b>Flash interviews</span></div> : <div className="empty-state"><Goal/><p>A época ainda está a aquecer.</p></div>}</article>
           <article className="stats"><h3>Números da época</h3>{official.stats.length ? official.stats.map(s => <div key={s.playerId}><span>{playerById(s.playerId)?.nickname || playerById(s.playerId)?.name || s.playerName || s.playerId}</span><b>{s.goals} G</b><b>{s.assists} A</b><b>{s.yellowCards} 🟨</b><b>{s.redCards} 🟥</b></div>) : <div className="empty-state"><Goal/><p><strong>Zeros muito bem alinhados.</strong><br/>Golos, assistências e cartões aparecem depois da estreia.</p></div>}</article>
           <article className="medical"><h3>Boletim clínico & disciplinar</h3>{content.availability.map(a => <div key={a.playerId}><span className={`status ${a.status}`}></span><div><b>{playerById(a.playerId)?.name}</b><p>{a.note}</p></div></div>)}<small>Sem detalhes médicos. O balneário agradece.</small></article>
         </div>

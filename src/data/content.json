@@ -5,6 +5,7 @@
     {"id":"cup","title":"Quartos da MiniFootball Cup","season":"2026","summary":"Entre os oito melhores. Bruno Correia assinou 5 golos e 1 assistência em 5 jogos.","record":"Top 8 nacional","url":"https://apminifootball.mygol.es/tournaments/627?tab=classification&stage=1"}
   ],
   "gallery": [
+    {"id":"novo-manto","title":"Estamos de volta","caption":"Nova época, nova cor: o manto bordeaux de 2026/27.","image":"/images/instagram-novo-manto.webp","alt":"Publicação do Curti Zona FC a apresentar o novo equipamento bordeaux","url":"https://www.instagram.com/p/Dd1xqduoOrc/"},
     {"id":"campeoes-proliga","title":"Campeões da ProLiga","caption":"A taça levantada na 1.ª época de 2025/26.","image":"/images/instagram-campeoes-proliga.webp","alt":"Jogadores do Curti Zona FC com as medalhas após vencerem a ProLiga Lisboa 4","url":"https://www.instagram.com/curti_zona_fc/p/DT89WVNiJvC/"},
     {"id":"minifootball-cup","title":"MiniFootball Cup","caption":"A equipa que chegou aos quartos-de-final em Almeirim.","image":"/images/instagram-minifootball-cup.webp","alt":"Equipa do Curti Zona FC na MiniFootball Cup de 2026","url":"https://www.instagram.com/curti_zona_fc/p/DU0mhTBjNm3/"}
   ],
@@ -30,5 +31,8 @@
     {"id":"berry","name":"Berry","role":"Cãobancada","group":"dogs"}, {"id":"yoshi","name":"Yoshi","role":"Cãobancada","group":"dogs"},
     {"id":"future-dogs","name":"Futuros cães da equipa","role":"Inscrições sempre abertas","group":"dogs"}
   ],
-  "videos": []
+  "videos": [
+    {"id":"flash-berun","title":"Flash interview do Berun","url":"/videos/flash-berun.mp4","kind":"interview","season":"2026/27","poster":"/images/flash-berun-cover.webp"},
+    {"id":"jameson-highlight","title":"Curti Zona FC × Jameson FC","url":"https://watch.sport.video/associacao-portuguesa-de-minifootball/2a-ep-2425-super-liga-lisboa-2/curti-zona-fc-vs-jameson-fc-203418?highlight=953640748","kind":"highlight","season":"2024/25"}
+  ]
 }
