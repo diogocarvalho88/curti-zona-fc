@@ -54,6 +54,6 @@ Em `content.json`, usar `availability` com `status` igual a `injured` ou `suspen
 
 ## Publicação
 
-O workflow `.github/workflows/deploy.yml` testa, sincroniza, compila e publica no GitHub Pages a cada push para `main`, todos os dias e manualmente. No repositório, selecionar **Settings → Pages → Source: GitHub Actions**. O Vite usa a base `/curti-zona-fc/`.
+O workflow `.github/workflows/deploy.yml` testa, sincroniza, compila e publica no GitHub Pages a cada push para `main`, todos os dias e manualmente. No repositório, selecionar **Settings → Pages → Source: GitHub Actions**. O Vite usa caminhos relativos para funcionar tanto no endereço GitHub Pages como em `curtizonafc.pt`.
 
 Antes do lançamento definitivo, adicionar o emblema e as três imagens referidas em `public/images/README.md`; o site não inventa nem apresenta a proposta do Francis como símbolo oficial.
