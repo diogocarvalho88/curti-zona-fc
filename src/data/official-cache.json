@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-09-28T21:42:28.924Z",
+  "syncedAt": "2026-09-29T13:01:55.378Z",
   "source": "https://apminifootball.mygol.es/api/teams/9157/details/742",
   "matches": [
     {
@@ -162,8 +162,8 @@
       "wins": 1,
       "draws": 0,
       "losses": 0,
-      "goalsFor": 7,
-      "goalsAgainst": 2,
+      "goalsFor": 6,
+      "goalsAgainst": 3,
       "points": 3
     },
     {
@@ -217,8 +217,8 @@
       "wins": 0,
       "draws": 0,
       "losses": 1,
-      "goalsFor": 2,
-      "goalsAgainst": 7,
+      "goalsFor": 3,
+      "goalsAgainst": 6,
       "points": 0
     },
     {
