@@ -86,11 +86,11 @@ function App() {
           <Logo />
           <p className="est">DESDE QUE NOS LEMBRAMOS</p>
         </div>
-        <div className="match-count-card">
-          <div className="versus"><span>CURTI ZONA FC</span><b>VS</b><span>JAMESON FC</span></div>
-          <div className="match-meta"><CalendarDays size={16}/> 27 SET · 19:00 · ALTA DE LISBOA</div>
-          <Countdown target="2026-09-27T19:00:00+01:00" completeLabel="A bola já rolou. Vê o resultado no centro de jogos!" />
-        </div>
+        {nextMatch && <div className="match-count-card">
+          <div className="versus"><span>{nextMatch.home}</span><b>VS</b><span>{nextMatch.away}</span></div>
+          <div className="match-meta"><CalendarDays size={16}/> {formatMatchDate(nextMatch.date)} · {nextMatch.venue || 'Local a confirmar'}</div>
+          {nextMatch.date ? <Countdown target={nextMatch.date} completeLabel="A bola já rolou. Vê o resultado no centro de jogos!" /> : <p className="countdown-complete">Data a confirmar</p>}
+        </div>}
       </section>
 
       <div className="ticker" aria-hidden="true"><span>SEM RECEITA MÉDICA</span><i>✦</i><span>TOMAR 1X POR SEMANA</span><i>✦</i><span>PODE CAUSAR GOLOS</span><i>✦</i><span>MANTER LONGE DO VAR</span></div>

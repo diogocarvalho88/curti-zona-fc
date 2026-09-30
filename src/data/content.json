@@ -5,9 +5,9 @@
     {"id":"cup","title":"Quartos da MiniFootball Cup","season":"2026","summary":"Entre os oito melhores. Bruno Correia assinou 5 golos e 1 assistência em 5 jogos.","record":"Top 8 nacional","url":"https://apminifootball.mygol.es/tournaments/627?tab=classification&stage=1"}
   ],
   "gallery": [
-    {"id":"novo-manto","title":"Estamos de volta","caption":"Nova época, nova cor: o manto bordeaux de 2026/27.","image":"/images/instagram-novo-manto.webp","alt":"Publicação do Curti Zona FC a apresentar o novo equipamento bordeaux","url":"https://www.instagram.com/p/Dd1xqduoOrc/"},
-    {"id":"campeoes-proliga","title":"Campeões da ProLiga","caption":"A taça levantada na 1.ª época de 2025/26.","image":"/images/instagram-campeoes-proliga.webp","alt":"Jogadores do Curti Zona FC com as medalhas após vencerem a ProLiga Lisboa 4","url":"https://www.instagram.com/curti_zona_fc/p/DT89WVNiJvC/"},
-    {"id":"minifootball-cup","title":"MiniFootball Cup","caption":"A equipa que chegou aos quartos-de-final em Almeirim.","image":"/images/instagram-minifootball-cup.webp","alt":"Equipa do Curti Zona FC na MiniFootball Cup de 2026","url":"https://www.instagram.com/curti_zona_fc/p/DU0mhTBjNm3/"}
+    {"id":"mvp-jornada-1","title":"MVP · Pedrinho","caption":"O destaque da jornada de estreia com o novo equipamento.","image":"/images/instagram-mvp-pedrinho.webp","alt":"Arte do MVP Pedrinho em bordeaux e dourado","url":"https://www.instagram.com/curti_zona_fc/p/Dd6fAbjiN_n/"},
+    {"id":"resultado-jornada-1","title":"Jornada 1 · 2–2","caption":"Curti Zona FC e Jameson FC dividiram os pontos.","image":"/images/instagram-jornada-1.webp","alt":"Arte do resultado 2–2 entre Curti Zona FC e Jameson FC","url":"https://www.instagram.com/curti_zona_fc/p/Dd6SJXfCN5i/"},
+    {"id":"novo-manto","title":"Estamos de volta","caption":"Nova época, nova cor: o manto bordeaux de 2026/27.","image":"/images/instagram-novo-manto.webp","alt":"Publicação do Curti Zona FC a apresentar o novo equipamento bordeaux","url":"https://www.instagram.com/p/Dd1xqduoOrc/"}
   ],
   "availability": [
     {"playerId":"diogo","status":"injured","note":"Em recuperação desde 17 de maio.","since":"2026-05-17"}
