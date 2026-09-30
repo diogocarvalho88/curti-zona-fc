@@ -25,7 +25,7 @@ img.logo-small{width:44px;height:44px;filter:none}
 .archive-heading>a{display:flex;align-items:center;gap:6px;color:var(--gold);font-size:11px;font-weight:700}
 .instagram-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .instagram-grid>a{display:flex;flex-direction:column;overflow:hidden;background:#292123;text-decoration:none}
-.instagram-grid img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;transition:transform .35s ease}
+.instagram-grid img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:contain;background:#e8e4dc;transition:transform .35s ease}
 .instagram-grid>a:hover img{transform:scale(1.02)}
 .instagram-grid>a>span{display:flex;flex:1;flex-direction:column;gap:4px;padding:13px 18px 16px;background:#292123;color:var(--paper)}
 .instagram-grid b{font:600 18px Oswald;text-transform:uppercase}
