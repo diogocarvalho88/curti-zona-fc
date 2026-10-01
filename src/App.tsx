@@ -104,7 +104,7 @@ function App() {
       </section>
 
       <section className="section dark-section" id="plantel">
-        <SectionHead eyebrow="POSOLOGIA RECOMENDADA" title="Nove jogadores. Uma zona." copy="O núcleo público para 2026/27. Retratos individuais entram quando houver fotografias confirmadas — aqui ninguém perde a cabeça num recorte mal feito." />
+        <SectionHead eyebrow="POSOLOGIA RECOMENDADA" title={`${players.length} jogadores. Uma zona.`} copy="O núcleo público para 2026/27. Retratos individuais entram quando houver fotografias confirmadas — aqui ninguém perde a cabeça num recorte mal feito." />
         <div className="squad-grid">{players.map((player, i) => <article className="player-card" key={player.id}>
           <div className="player-photo-placeholder"><span>{String(i + 1).padStart(2, '0')}</span><Shirt size={42}/></div>
           <div className="player-number">{player.number === null ? '—' : player.number}</div>

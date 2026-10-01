@@ -7,5 +7,7 @@
   {"id":"francis","name":"Francisco Gonçalves","nickname":"Mad Honey","number":18,"position":"Universal"},
   {"id":"jorge","name":"Jorge Ambrósio","nickname":"Ambrux","number":16,"position":"Médio"},
   {"id":"filipe","name":"Filipe Campos","number":8,"position":"Ala"},
-  {"id":"jonicas","name":"João Figueira","nickname":"Jonicas","number":2,"position":"Defesa"}
+  {"id":"jonicas","name":"João Figueira","nickname":"Jonicas","number":2,"position":"Defesa"},
+  {"id":"mygol-39902","name":"João Almeida","nickname":"Jasa","number":7,"position":"Guarda-redes"},
+  {"id":"mygol-39112","name":"Mamadu Djaló","nickname":"Mamadu","number":null,"position":"Defesa"}
 ]
