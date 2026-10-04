@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-10-04T12:29:44.965Z",
+  "syncedAt": "2026-10-04T21:26:48.049Z",
   "source": "https://apminifootball.mygol.es/api/teams/9157/details/742",
   "matches": [
     {
@@ -18,8 +18,8 @@
       "date": "2026-10-04T19:00:00+01:00",
       "home": "CD Póvoa de Santo Adrião",
       "away": "Curti Zona FC",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 3,
+      "awayScore": 4,
       "venue": "Complexo Desportivo Alto do Lumiar - Campo 1"
     },
     {
@@ -147,93 +147,102 @@
     {
       "position": 1,
       "team": "Estrelas FC",
-      "played": 1,
-      "wins": 1,
+      "played": 2,
+      "wins": 2,
       "draws": 0,
       "losses": 0,
-      "goalsFor": 7,
+      "goalsFor": 13,
       "goalsAgainst": 1,
-      "points": 3
+      "points": 6
     },
     {
       "position": 2,
       "team": "Calmex FC",
-      "played": 1,
-      "wins": 1,
+      "played": 2,
+      "wins": 2,
       "draws": 0,
       "losses": 0,
-      "goalsFor": 6,
-      "goalsAgainst": 3,
-      "points": 3
+      "goalsFor": 9,
+      "goalsAgainst": 4,
+      "points": 6
     },
     {
       "position": 3,
       "team": "La Weed Squadra",
-      "played": 1,
-      "wins": 1,
+      "played": 2,
+      "wins": 2,
       "draws": 0,
       "losses": 0,
-      "goalsFor": 3,
-      "goalsAgainst": 2,
-      "points": 3
+      "goalsFor": 7,
+      "goalsAgainst": 5,
+      "points": 6
     },
     {
       "position": 4,
       "team": "Curti Zona FC",
-      "played": 1,
-      "wins": 0,
+      "played": 2,
+      "wins": 1,
       "draws": 1,
       "losses": 0,
-      "goalsFor": 2,
-      "goalsAgainst": 2,
-      "points": 1
+      "goalsFor": 6,
+      "goalsAgainst": 5,
+      "points": 4
     },
     {
       "position": 5,
       "team": "Jameson FC",
-      "played": 1,
+      "played": 2,
       "wins": 0,
       "draws": 1,
-      "losses": 0,
+      "losses": 1,
       "goalsFor": 2,
-      "goalsAgainst": 2,
+      "goalsAgainst": 8,
       "points": 1
     },
     {
       "position": 6,
       "team": "CD Póvoa de Santo Adrião",
-      "played": 1,
+      "played": 2,
       "wins": 0,
       "draws": 0,
-      "losses": 1,
-      "goalsFor": 2,
-      "goalsAgainst": 3,
+      "losses": 2,
+      "goalsFor": 5,
+      "goalsAgainst": 7,
       "points": 0
     },
     {
       "position": 7,
       "team": "ACMI",
-      "played": 1,
+      "played": 2,
       "wins": 0,
       "draws": 0,
-      "losses": 1,
-      "goalsFor": 3,
-      "goalsAgainst": 6,
+      "losses": 2,
+      "goalsFor": 6,
+      "goalsAgainst": 10,
       "points": 0
     },
     {
       "position": 8,
       "team": "Eleven K",
-      "played": 1,
+      "played": 2,
       "wins": 0,
       "draws": 0,
-      "losses": 1,
-      "goalsFor": 1,
-      "goalsAgainst": 7,
+      "losses": 2,
+      "goalsFor": 2,
+      "goalsAgainst": 10,
       "points": 0
     }
   ],
   "stats": [
+    {
+      "playerId": "mygol-8445",
+      "playerName": "Afonso Loureiro",
+      "appearances": 1,
+      "goals": 0,
+      "assists": 0,
+      "yellowCards": 0,
+      "redCards": 0
+    },
     {
       "playerId": "mygol-39112",
       "playerName": "Mamadu Djaló",
@@ -255,7 +264,7 @@
     {
       "playerId": "jonicas",
       "playerName": "João Figueira",
-      "appearances": 1,
+      "appearances": 2,
       "goals": 0,
       "assists": 0,
       "yellowCards": 0,
@@ -264,9 +273,9 @@
     {
       "playerId": "andre",
       "playerName": "André Lopes",
-      "appearances": 1,
+      "appearances": 2,
       "goals": 0,
-      "assists": 0,
+      "assists": 1,
       "yellowCards": 1,
       "redCards": 0
     },
@@ -291,8 +300,8 @@
     {
       "playerId": "peyroteo",
       "playerName": "Bruno Correia",
-      "appearances": 1,
-      "goals": 1,
+      "appearances": 2,
+      "goals": 4,
       "assists": 0,
       "yellowCards": 0,
       "redCards": 0
@@ -300,25 +309,25 @@
     {
       "playerId": "pedrinho",
       "playerName": "Pedro Correia",
-      "appearances": 1,
+      "appearances": 2,
       "goals": 1,
       "assists": 0,
-      "yellowCards": 1,
+      "yellowCards": 2,
       "redCards": 0
     },
     {
       "playerId": "jorge",
       "playerName": "Jorge Ambrósio",
-      "appearances": 1,
-      "goals": 0,
-      "assists": 1,
+      "appearances": 2,
+      "goals": 1,
+      "assists": 2,
       "yellowCards": 0,
       "redCards": 0
     },
     {
       "playerId": "francis",
       "playerName": "Francisco Gonçalves",
-      "appearances": 1,
+      "appearances": 2,
       "goals": 0,
       "assists": 0,
       "yellowCards": 0,
@@ -380,10 +389,10 @@
       "date": "2026-10-04T18:00:00+01:00",
       "home": "ACMI",
       "away": "La Weed Squadra",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 3,
+      "awayScore": 4,
       "venue": "Complexo Desportivo Alto do Lumiar - Campo 1",
-      "status": 1
+      "status": 5
     },
     {
       "id": "league-2-2",
@@ -391,10 +400,10 @@
       "date": "2026-10-04T19:00:00+01:00",
       "home": "CD Póvoa de Santo Adrião",
       "away": "Curti Zona FC",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 3,
+      "awayScore": 4,
       "venue": "Complexo Desportivo Alto do Lumiar - Campo 1",
-      "status": 1
+      "status": 5
     },
     {
       "id": "league-2-3",
@@ -402,10 +411,10 @@
       "date": "2026-10-04T20:00:00+01:00",
       "home": "Eleven K",
       "away": "Calmex FC",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 1,
+      "awayScore": 3,
       "venue": "Complexo Desportivo Alto do Lumiar - Campo 1",
-      "status": 1
+      "status": 5
     },
     {
       "id": "league-2-4",
@@ -413,10 +422,10 @@
       "date": "2026-10-04T21:00:00+01:00",
       "home": "Jameson FC",
       "away": "Estrelas FC",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 6,
       "venue": "Complexo Desportivo Alto do Lumiar - Campo 1",
-      "status": 1
+      "status": 5
     },
     {
       "id": "league-3-1",
