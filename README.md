@@ -17,7 +17,7 @@ O build tenta sincronizar os dados oficiais da [MyGol](https://apminifootball.my
 
 - `src/data/players.json`: plantel curado, alcunhas, números e perfis Zerozero.
 - `src/data/content.json`: notícias, indisponibilidades, vídeos e membros da família.
-- `src/data/official-cache.json`: jogos, classificação, estatísticas e último 7.
+- `src/data/official-cache.json`: jogos e estatísticas da Liga (`matches`, `stats`) e da Taça (`cupMatches`, `cupStats`), classificação da Liga e último 7. Os números da época somam Liga e Taça. A sincronização de cada competição preserva a cache se a origem falhar.
 - `public/images/`: imagens WebP; guardar os originais em `public/images/originals/`.
 
 ### Jogador ou perfil externo

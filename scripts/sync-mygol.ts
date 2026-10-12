@@ -122,6 +122,44 @@ function payloadsFromHtml(html: string): unknown[] {
   return results
 }
 
+export function parseCupPayload(payload: Record<string, unknown>) {
+  const ids: Record<string, string> = {
+    'Diogo Carvalho': 'diogo', 'André Lopes': 'andre', 'Pedro Correia': 'pedrinho',
+    'Bruno Correia': 'peyroteo', 'Bruno Codinha': 'codinha', 'Francisco Gonçalves': 'francis',
+    'Jorge Ambrósio': 'jorge', 'Filipe Campos': 'filipe', 'João Figueira': 'jonicas',
+  }
+  const cupMatches = (parsePayload(payload).matches || []).map(match => ({
+    ...match, id: `cup-${match.round}`, competition: 'Taça Lisboa',
+    sourceUrl: 'https://apminifootball.mygol.es/tournaments/735/teams/9586',
+  }))
+  const cupStats: PlayerStats[] = ((payload.players as Record<string, unknown>[] | undefined) || []).flatMap(player => {
+    const playerName = `${text(player.name)} ${text(player.surname)}`
+    const summary = player.dayResultSummary as Record<string, unknown> | undefined
+    const appearances = number(summary?.gamesPlayed) ?? 0
+    const goals = number(summary?.points) ?? 0
+    const assists = number(summary?.assistances) ?? 0
+    const yellowCards = number(summary?.cardsType1) ?? 0
+    const redCards = number(summary?.cardsType2) ?? 0
+    if (appearances + goals + assists + yellowCards + redCards === 0) return []
+    return [{ playerId: ids[playerName] || `mygol-${number(player.id)}`, playerName, appearances, goals, assists, yellowCards, redCards }]
+  })
+  return { cupMatches, cupStats }
+}
+
+async function syncCup() {
+  try {
+    const response = await fetch('https://apminifootball.mygol.es/api/teams/9586/details/735', { signal: AbortSignal.timeout(20_000) })
+    if (!response.ok) throw new Error(`HTTP ${response.status}`)
+    const parsed = parseCupPayload(await response.json())
+    if (!parsed.cupMatches.length) throw new Error('calendário da Taça não reconhecido')
+    const cached = JSON.parse(await readFile(cachePath, 'utf8')) as OfficialData
+    await writeFile(cachePath, `${JSON.stringify({ ...cached, ...parsed }, null, 2)}\n`)
+    console.log(`MyGol: Taça atualizada (${parsed.cupMatches.length} jogos).`)
+  } catch (error) {
+    console.warn(`Taça indisponível; mantém cache local. ${error instanceof Error ? error.message : error}`)
+  }
+}
+
 async function sync() {
   const cached = JSON.parse(await readFile(cachePath, 'utf8')) as OfficialData
   try {
@@ -216,4 +254,7 @@ async function sync() {
   }
 }
 
-if (process.env.VITEST !== 'true') await sync()
+if (process.env.VITEST !== 'true') {
+  await sync()
+  if (!process.env.MYGOL_API_URL) await syncCup()
+}

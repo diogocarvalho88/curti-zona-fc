@@ -4,16 +4,21 @@ import playersJson from './data/players.json'
 import contentJson from './data/content.json'
 import officialJson from './data/official-cache.json'
 import type { Availability, CareerHighlight, ClubMember, GalleryItem, NewsItem, OfficialData, Player, VideoLink } from './types'
+import { seasonStats, seasonRecord } from './lib/season'
 import { Countdown } from './components/Countdown'
-import { formatMatchDate, sortMatches } from './lib/time'
+import { formatMatchDate } from './lib/time'
 
 const players = playersJson as Player[]
 const content = contentJson as { highlights: CareerHighlight[]; gallery: GalleryItem[]; availability: Availability[]; news: NewsItem[]; members: ClubMember[]; videos: VideoLink[] }
 const official = officialJson as OfficialData
+const allMatches = [...official.matches, ...(official.cupMatches || [])].sort((a, b) =>
+  (a.date ? new Date(a.date).getTime() : Infinity) - (b.date ? new Date(b.date).getTime() : Infinity))
+const stats = seasonStats(official.stats, official.cupStats || [])
+const record = seasonRecord(allMatches)
 const links = {
   instagram: 'https://www.instagram.com/curti_zona_fc/',
   mygol: 'https://apminifootball.mygol.es/tournaments/742/teams/9157',
-  cup: 'https://apminifootball.mygol.es/',
+  cup: 'https://apminifootball.mygol.es/tournaments/735/teams/9586',
   sportVideo: 'https://watch.sport.video/associacao-portuguesa-de-minifootball/teams/curti-zona-fc-none',
 }
 
@@ -40,16 +45,16 @@ function App() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [matchFilter, setMatchFilter] = useState<'all' | 'played' | 'next'>('all')
   const matches = useMemo(() => {
-    const sorted = sortMatches(official.matches)
+    const sorted = allMatches
     if (matchFilter === 'played') return sorted.filter(m => m.homeScore !== null)
     if (matchFilter === 'next') return sorted.filter(m => m.homeScore === null)
     return sorted
   }, [matchFilter])
-  const nextMatch = sortMatches(official.matches).find(m => m.homeScore === null)
+  const nextMatch = allMatches.find(m => m.homeScore === null)
   const leagueMatches = official.leagueMatches || []
   const latestRound = Math.max(1, ...leagueMatches.filter(match => match.homeScore !== null).map(match => match.round))
   const roundMatches = leagueMatches.filter(match => match.round === latestRound)
-  const curtiStanding = official.standings.find(standing => standing.team === 'Curti Zona FC')
+  const curtiStanding = record.played ? record : undefined
   const playerById = (id: string) => players.find(p => p.id === id)
   const selectedNews = content.news.find(item => item.id === new URLSearchParams(window.location.search).get('noticia'))
 
@@ -119,11 +124,11 @@ function App() {
       </section>
 
       <section className="section fixtures" id="jogos">
-        <SectionHead eyebrow="CENTRO DE JOGOS" title="A época, jornada a jornada." copy="Resultados e calendário oficial com cache local. Se a internet falhar, a memória do clube não falha." />
-        {nextMatch && <article className="next-match"><div><p>PRÓXIMA DOSE · J{nextMatch.round}</p><h3>{nextMatch.home} <span>vs</span> {nextMatch.away}</h3><span>{formatMatchDate(nextMatch.date)} · {nextMatch.venue || 'Local a confirmar'}</span></div><ExternalButton href={links.mygol} dark>Ficha no MyGol</ExternalButton></article>}
+        <SectionHead eyebrow="CENTRO DE JOGOS" title="A época, jornada a jornada." copy="Calendário e resultados da SuperLiga Lisboa 2 e da Taça Lisboa." />
+        {nextMatch && <article className="next-match"><div><p>PRÓXIMA DOSE · {nextMatch.competition || 'SuperLiga'} · J{nextMatch.round}</p><h3>{nextMatch.home} <span>vs</span> {nextMatch.away}</h3><span>{formatMatchDate(nextMatch.date)} · {nextMatch.venue || 'Local a confirmar'}</span></div><ExternalButton href={nextMatch.sourceUrl || links.mygol} dark>Ficha no MyGol</ExternalButton></article>}
         <div className="game-layout"><div>
           <div className="filters" role="group" aria-label="Filtrar jogos">{([['all','Todos'],['played','Resultados'],['next','Por jogar']] as const).map(([key,label]) => <button className={matchFilter === key ? 'active' : ''} onClick={() => setMatchFilter(key)} key={key}>{label}</button>)}</div>
-          <div className="match-list">{matches.length ? matches.map(match => <article className="match-row" key={match.id}><span className="round">J{match.round}</span><span className="date">{formatMatchDate(match.date)}</span><div><b>{match.home}</b><small>{match.away}</small></div><strong className="score">{match.homeScore === null ? '—' : `${match.homeScore}–${match.awayScore}`}</strong>{content.videos.find(video => video.id === match.videoId || video.matchId === match.id) && <a href={content.videos.find(video => video.id === match.videoId || video.matchId === match.id)!.url} target="_blank" rel="noreferrer">Vídeo</a>}</article>) : <div className="empty-state"><CircleAlert/>Ainda não há jogos nesta categoria.</div>}</div>
+          <div className="match-list">{matches.length ? matches.map(match => <article className="match-row" key={match.id}><span className="round">{match.competition ? 'Taça · ' : ''}J{match.round}</span><span className="date">{formatMatchDate(match.date)}</span><div><b>{match.home}</b><small>{match.away}</small></div><strong className="score">{match.homeScore === null ? '—' : `${match.homeScore}–${match.awayScore}`}</strong>{content.videos.find(video => video.id === match.videoId || video.matchId === match.id) && <a href={content.videos.find(video => video.id === match.videoId || video.matchId === match.id)!.url} target="_blank" rel="noreferrer">Vídeo</a>}</article>) : <div className="empty-state"><CircleAlert/>Ainda não há jogos nesta categoria.</div>}</div>
           {roundMatches.length > 0 && <section className="round-results"><div className="subsection-title"><div><p className="eyebrow">SUPERLIGA LISBOA 2</p><h3>Resultados · Jornada {latestRound}</h3></div><span>Todos os jogos</span></div><div>{roundMatches.map(match => <article className={match.home === 'Curti Zona FC' || match.away === 'Curti Zona FC' ? 'curti-match' : ''} key={match.id}><time>{formatMatchDate(match.date)}</time><span>{match.home}</span><strong>{match.homeScore === null ? '—' : `${match.homeScore}–${match.awayScore}`}</strong><span>{match.away}</span></article>)}</div></section>}
         </div><aside className="standings"><h3>Classificação · 1.ª época 2026/27</h3>{official.standings.length ? <div className="standings-table"><div className="standings-head"><b>#</b><span>Equipa</span><i>J</i><i>V</i><i>E</i><i>D</i><i>DG</i><strong>Pts</strong></div>{official.standings.map(s => <div className={s.team === 'Curti Zona FC' ? 'curti-row' : ''} key={s.team}><b>{s.position}</b><span>{s.team}</span><i>{s.played}</i><i>{s.wins}</i><i>{s.draws}</i><i>{s.losses}</i><i>{s.goalsFor - s.goalsAgainst > 0 ? '+' : ''}{s.goalsFor - s.goalsAgainst}</i><strong>{s.points}</strong></div>)}</div> : <div className="empty-state compact"><Clock3/><p>A tabela aquece depois do apito inicial.</p></div>}<small>Classificação provisória enquanto o MyGol valida a jornada.</small><a href={links.mygol} target="_blank" rel="noreferrer">Ver classificação oficial <ArrowUpRight size={14}/></a></aside></div>
         <section className="match-media" id="videos" aria-labelledby="videos-heading">
@@ -138,8 +143,8 @@ function App() {
 
       <section className="section performance">
         <SectionHead eyebrow="ÁREA DESPORTIVA" title="A folha do mister." />
-        <div className="performance-grid"><article className="season-summary"><h3>Balanço da época</h3>{curtiStanding ? <div className="summary-numbers"><span><b>{curtiStanding.played}</b>Jogos</span><span><b>{curtiStanding.wins}</b>Vitórias</span><span><b>{curtiStanding.draws}</b>Empates</span><span><b>{curtiStanding.losses}</b>Derrotas</span><span><b>{curtiStanding.goalsFor}</b>Golos</span><span><b>{curtiStanding.goalsAgainst}</b>Sofridos</span><span><b>{content.videos.filter(v => v.kind === 'interview' && v.season === '2026/27').length}</b>Flash interviews</span></div> : <div className="empty-state"><Goal/><p>A época ainda está a aquecer.</p></div>}</article>
-          <article className="stats"><h3>Números da época</h3>{official.stats.length ? official.stats.map(s => <div key={s.playerId}><span>{playerById(s.playerId)?.nickname || playerById(s.playerId)?.name || s.playerName || s.playerId}</span><b>{s.goals} G</b><b>{s.assists} A</b><b>{s.yellowCards} 🟨</b><b>{s.redCards} 🟥</b></div>) : <div className="empty-state"><Goal/><p><strong>Zeros muito bem alinhados.</strong><br/>Golos, assistências e cartões aparecem depois da estreia.</p></div>}</article>
+        <div className="performance-grid"><article className="season-summary"><h3>Balanço da época · Liga + Taça</h3>{curtiStanding ? <div className="summary-numbers"><span><b>{curtiStanding.played}</b>Jogos</span><span><b>{curtiStanding.wins}</b>Vitórias</span><span><b>{curtiStanding.draws}</b>Empates</span><span><b>{curtiStanding.losses}</b>Derrotas</span><span><b>{curtiStanding.goalsFor}</b>Golos</span><span><b>{curtiStanding.goalsAgainst}</b>Sofridos</span><span><b>{content.videos.filter(v => v.kind === 'interview' && v.season === '2026/27').length}</b>Flash interviews</span></div> : <div className="empty-state"><Goal/><p>A época ainda está a aquecer.</p></div>}</article>
+          <article className="stats"><h3>Números da época · Liga + Taça</h3>{stats.length ? stats.map(s => <div key={s.playerId}><span>{playerById(s.playerId)?.nickname || playerById(s.playerId)?.name || s.playerName || s.playerId}</span><b>{s.goals} G</b><b>{s.assists} A</b><b>{s.yellowCards} 🟨</b><b>{s.redCards} 🟥</b></div>) : <div className="empty-state"><Goal/><p><strong>Zeros muito bem alinhados.</strong><br/>Golos, assistências e cartões aparecem depois da estreia.</p></div>}</article>
           <article className="medical"><h3>Boletim clínico & disciplinar</h3>{content.availability.map(a => <div key={a.playerId}><span className={`status ${a.status}`}></span><div><b>{playerById(a.playerId)?.name}</b><p>{a.note}</p></div></div>)}<small>Sem detalhes médicos. O balneário agradece.</small></article>
         </div>
       </section>

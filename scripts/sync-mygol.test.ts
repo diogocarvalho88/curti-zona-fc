@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { parsePayload, standingsFromMatches } from './sync-mygol'
+import { parseCupPayload, parsePayload, standingsFromMatches } from './sync-mygol'
 
 describe('MyGol parser', () => {
   it('normalizes matches, standings and stats', () => {
@@ -16,5 +16,18 @@ describe('MyGol parser', () => {
     ])
     expect(table[0]).toMatchObject({ team: 'Estrelas FC', points: 3, goalsFor: 7, goalsAgainst: 1 })
     expect(table.find(row => row.team === 'Curti Zona FC')).toMatchObject({ played: 1, draws: 1, points: 1 })
+  })
+})
+
+
+describe('cup cache', () => {
+  it('reads cup results, planned fixtures, Lisbon winter time and trimmed player names', () => {
+    const result = parseCupPayload({ days: [
+      { matches: [{ startTime: '2026-10-11T18:00:00', status: 5, homeTeam: { name: 'Curti Zona FC' }, visitorTeam: { name: 'Taberna FC' }, visibleHomeScore: 2, visibleVisitorScore: 3 }] },
+      { matches: [{ startTime: '2026-11-01T17:00:00', status: 1, homeTeam: { name: 'Curti Zona FC' }, visitorTeam: { name: 'Póvoa' }, visibleHomeScore: 0, visibleVisitorScore: 0 }] },
+    ], players: [{ id: 19287, name: 'Pedro', surname: 'Correia ', dayResultSummary: { gamesPlayed: 1, cardsType1: 1 } }] })
+    expect(result.cupMatches[0]).toMatchObject({ id: 'cup-1', homeScore: 2, awayScore: 3, competition: 'Taça Lisboa', date: '2026-10-11T18:00:00+01:00' })
+    expect(result.cupMatches[1]).toMatchObject({ homeScore: null, awayScore: null, date: '2026-11-01T17:00:00+00:00' })
+    expect(result.cupStats[0]).toMatchObject({ playerId: 'pedrinho', yellowCards: 1 })
   })
 })

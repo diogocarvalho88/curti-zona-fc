@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-10-12T15:39:15.739Z",
+  "syncedAt": "2026-10-12T21:21:35.772Z",
   "source": "https://apminifootball.mygol.es/api/teams/9157/details/742",
   "matches": [
     {
@@ -954,6 +954,127 @@
       "awayScore": null,
       "venue": "Complexo Desportivo Alto do Lumiar - Campo 1",
       "status": 1
+    }
+  ],
+  "cupMatches": [
+    {
+      "id": "cup-1",
+      "round": 1,
+      "date": "2026-10-11T18:00:00+01:00",
+      "home": "Curti Zona FC",
+      "away": "Taberna FC",
+      "homeScore": 2,
+      "awayScore": 3,
+      "venue": "Funsports Alfragide",
+      "competition": "Taça Lisboa",
+      "sourceUrl": "https://apminifootball.mygol.es/tournaments/735/teams/9586"
+    },
+    {
+      "id": "cup-2",
+      "round": 2,
+      "date": "2026-11-01T17:00:00+00:00",
+      "home": "Curti Zona FC",
+      "away": "CD Póvoa de Santo Adrião",
+      "homeScore": null,
+      "awayScore": null,
+      "venue": "Funsports Alfragide",
+      "competition": "Taça Lisboa",
+      "sourceUrl": "https://apminifootball.mygol.es/tournaments/735/teams/9586"
+    },
+    {
+      "id": "cup-3",
+      "round": 3,
+      "date": "2026-11-22T17:00:00+00:00",
+      "home": "FutBeer",
+      "away": "Curti Zona FC",
+      "homeScore": null,
+      "awayScore": null,
+      "venue": "Funsports Alfragide",
+      "competition": "Taça Lisboa",
+      "sourceUrl": "https://apminifootball.mygol.es/tournaments/735/teams/9586"
+    }
+  ],
+  "cupStats": [
+    {
+      "playerId": "mygol-39112",
+      "playerName": "Mamadu Djaló",
+      "appearances": 1,
+      "goals": 0,
+      "assists": 1,
+      "yellowCards": 0,
+      "redCards": 0
+    },
+    {
+      "playerId": "codinha",
+      "playerName": "Bruno Codinha",
+      "appearances": 1,
+      "goals": 0,
+      "assists": 0,
+      "yellowCards": 0,
+      "redCards": 0
+    },
+    {
+      "playerId": "jonicas",
+      "playerName": "João Figueira",
+      "appearances": 1,
+      "goals": 0,
+      "assists": 0,
+      "yellowCards": 0,
+      "redCards": 0
+    },
+    {
+      "playerId": "andre",
+      "playerName": "André Lopes",
+      "appearances": 1,
+      "goals": 0,
+      "assists": 0,
+      "yellowCards": 1,
+      "redCards": 0
+    },
+    {
+      "playerId": "mygol-39902",
+      "playerName": "João Almeida",
+      "appearances": 1,
+      "goals": 0,
+      "assists": 0,
+      "yellowCards": 0,
+      "redCards": 0
+    },
+    {
+      "playerId": "peyroteo",
+      "playerName": "Bruno Correia",
+      "appearances": 1,
+      "goals": 1,
+      "assists": 0,
+      "yellowCards": 0,
+      "redCards": 0
+    },
+    {
+      "playerId": "pedrinho",
+      "playerName": "Pedro Correia",
+      "appearances": 1,
+      "goals": 0,
+      "assists": 0,
+      "yellowCards": 1,
+      "redCards": 0
+    },
+    {
+      "playerId": "jorge",
+      "playerName": "Jorge Ambrósio",
+      "appearances": 1,
+      "goals": 1,
+      "assists": 0,
+      "yellowCards": 0,
+      "redCards": 0
+    },
+    {
+      "playerId": "francis",
+      "playerName": "Francisco Gonçalves",
+      "appearances": 1,
+      "goals": 0,
+      "assists": 0,
+      "yellowCards": 1,
+      "redCards": 0
     }
   ]
 }
