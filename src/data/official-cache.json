@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-10-27T12:22:39.300Z",
+  "syncedAt": "2026-10-28T13:07:45.962Z",
   "source": "https://apminifootball.mygol.es/api/teams/9157/details/742",
   "matches": [
     {
@@ -583,8 +583,8 @@
       "id": "league-6-2",
       "round": 6,
       "date": "2026-11-15T19:00:00+00:00",
-      "home": "CD Póvoa de Santo Adrião",
-      "away": "Eleven K",
+      "home": "La Weed Squadra",
+      "away": "Jameson FC",
       "homeScore": null,
       "awayScore": null,
       "venue": "Complexo Desportivo Alto do Lumiar - Campo 1",
@@ -594,8 +594,8 @@
       "id": "league-6-3",
       "round": 6,
       "date": "2026-11-15T20:00:00+00:00",
-      "home": "La Weed Squadra",
-      "away": "Jameson FC",
+      "home": "CD Póvoa de Santo Adrião",
+      "away": "Eleven K",
       "homeScore": null,
       "awayScore": null,
       "venue": "Complexo Desportivo Alto do Lumiar - Campo 1",
