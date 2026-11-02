@@ -62,6 +62,14 @@
   ],
   "news": [
     {
+      "id": "vitoria-taca-povoa-sem-craques",
+      "date": "2026-11-02",
+      "category": "Taça Lisboa · Vitória de equipa",
+      "title": "Faltaram os craques. Não faltou Curti Zona.",
+      "summary": "Domingo, 1 de novembro, o Curti Zona FC somou uma grande vitória frente ao CD Póvoa de Santo Adrião, na Taça Lisboa. Pedrinho, Mamadu, André e Diogo, entre outros, ficaram de fora. A lista de ausências tinha nomes para uma equipa de respeito; felizmente, a lista de presentes também. Quem foi a jogo tratou de lembrar que esta camisola não vive só dos nomes nas costas. Com várias peças em falta, a resposta foi de equipa: uma vitória para celebrar por todos, dentro e fora do campo. Os ausentes fizeram falta — mas o Curti Zona fez o resto.",
+      "notice": "Aviso aos craques ausentes: podem voltar. Mas agora vão ter de conquistar o lugar. A vitória fica para a família toda; a próxima convocatória promete conversa."
+    },
+    {
       "id": "taca-taberna-j1",
       "date": "2026-10-11",
       "category": "Taça Lisboa · Grupo C",
