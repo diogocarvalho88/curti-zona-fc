@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-11-01T13:34:14.036Z",
+  "syncedAt": "2026-11-02T09:09:22.883Z",
   "source": "https://apminifootball.mygol.es/api/teams/9157/details/742",
   "matches": [
     {
@@ -984,8 +984,8 @@
       "date": "2026-11-01T16:00:00+00:00",
       "home": "Curti Zona FC",
       "away": "CD Póvoa de Santo Adrião",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 11,
+      "awayScore": 2,
       "venue": "Funsports Alfragide",
       "competition": "Taça Lisboa",
       "sourceUrl": "https://apminifootball.mygol.es/tournaments/735/teams/9586"
@@ -1004,6 +1004,15 @@
     }
   ],
   "cupStats": [
+    {
+      "playerId": "mygol-17632",
+      "playerName": "Henrique Nunes",
+      "appearances": 1,
+      "goals": 1,
+      "assists": 0,
+      "yellowCards": 0,
+      "redCards": 0
+    },
     {
       "playerId": "mygol-39112",
       "playerName": "Mamadu Djaló",
@@ -1025,7 +1034,7 @@
     {
       "playerId": "jonicas",
       "playerName": "João Figueira",
-      "appearances": 1,
+      "appearances": 2,
       "goals": 0,
       "assists": 0,
       "yellowCards": 0,
@@ -1043,6 +1052,15 @@
     {
       "playerId": "mygol-39902",
       "playerName": "João Almeida",
+      "appearances": 2,
+      "goals": 0,
+      "assists": 0,
+      "yellowCards": 0,
+      "redCards": 0
+    },
+    {
+      "playerId": "filipe",
+      "playerName": "Filipe Campos",
       "appearances": 1,
       "goals": 0,
       "assists": 0,
@@ -1052,8 +1070,8 @@
     {
       "playerId": "peyroteo",
       "playerName": "Bruno Correia",
-      "appearances": 1,
-      "goals": 1,
+      "appearances": 2,
+      "goals": 7,
       "assists": 0,
       "yellowCards": 0,
       "redCards": 0
@@ -1068,20 +1086,29 @@
       "redCards": 0
     },
     {
+      "playerId": "mygol-39903",
+      "playerName": "Gastão Silva",
+      "appearances": 1,
+      "goals": 0,
+      "assists": 0,
+      "yellowCards": 0,
+      "redCards": 0
+    },
+    {
       "playerId": "jorge",
       "playerName": "Jorge Ambrósio",
-      "appearances": 1,
-      "goals": 1,
-      "assists": 0,
+      "appearances": 2,
+      "goals": 3,
+      "assists": 3,
       "yellowCards": 0,
       "redCards": 0
     },
     {
       "playerId": "francis",
       "playerName": "Francisco Gonçalves",
-      "appearances": 1,
+      "appearances": 2,
       "goals": 0,
-      "assists": 0,
+      "assists": 1,
       "yellowCards": 1,
       "redCards": 0
     }
