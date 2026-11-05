@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-11-04T14:40:32.503Z",
+  "syncedAt": "2026-11-05T14:45:19.806Z",
   "source": "https://apminifootball.mygol.es/api/teams/9157/details/742",
   "matches": [
     {
@@ -85,7 +85,7 @@
     {
       "id": "mygol-9-1",
       "round": 9,
-      "date": "2026-12-13T20:00:00+00:00",
+      "date": "2026-12-13T21:00:00+00:00",
       "home": "Curti Zona FC",
       "away": "CD Póvoa de Santo Adrião",
       "homeScore": null,
@@ -715,8 +715,8 @@
       "id": "league-9-2",
       "round": 9,
       "date": "2026-12-13T20:00:00+00:00",
-      "home": "Curti Zona FC",
-      "away": "CD Póvoa de Santo Adrião",
+      "home": "Calmex FC",
+      "away": "Eleven K",
       "homeScore": null,
       "awayScore": null,
       "venue": "Funsports Alfragide",
@@ -726,8 +726,8 @@
       "id": "league-9-3",
       "round": 9,
       "date": "2026-12-13T21:00:00+00:00",
-      "home": "Estrelas FC",
-      "away": "Jameson FC",
+      "home": "Curti Zona FC",
+      "away": "CD Póvoa de Santo Adrião",
       "homeScore": null,
       "awayScore": null,
       "venue": "Funsports Alfragide",
@@ -737,8 +737,8 @@
       "id": "league-9-4",
       "round": 9,
       "date": "2026-12-13T22:00:00+00:00",
-      "home": "Calmex FC",
-      "away": "Eleven K",
+      "home": "Estrelas FC",
+      "away": "Jameson FC",
       "homeScore": null,
       "awayScore": null,
       "venue": "Funsports Alfragide",
