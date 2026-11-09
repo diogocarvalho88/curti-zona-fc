@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-11-08T13:35:32.316Z",
+  "syncedAt": "2026-11-09T16:33:32.509Z",
   "source": "https://apminifootball.mygol.es/api/teams/9157/details/742",
   "matches": [
     {
@@ -48,8 +48,8 @@
       "date": "2026-11-08T22:00:00+00:00",
       "home": "Calmex FC",
       "away": "Curti Zona FC",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 5,
+      "awayScore": 4,
       "venue": "Funsports Alfragide"
     },
     {
@@ -75,7 +75,7 @@
     {
       "id": "mygol-8-1",
       "round": 8,
-      "date": "2026-12-06T22:00:00+00:00",
+      "date": "2026-12-06T21:00:00+00:00",
       "home": "Jameson FC",
       "away": "Curti Zona FC",
       "homeScore": null,
@@ -147,90 +147,90 @@
     {
       "position": 1,
       "team": "Estrelas FC",
-      "played": 4,
+      "played": 5,
       "wins": 4,
       "draws": 0,
-      "losses": 0,
-      "goalsFor": 20,
-      "goalsAgainst": 4,
+      "losses": 1,
+      "goalsFor": 21,
+      "goalsAgainst": 10,
       "points": 12
     },
     {
       "position": 2,
       "team": "Calmex FC",
-      "played": 4,
-      "wins": 3,
+      "played": 5,
+      "wins": 4,
       "draws": 0,
       "losses": 1,
-      "goalsFor": 16,
-      "goalsAgainst": 12,
-      "points": 9
+      "goalsFor": 21,
+      "goalsAgainst": 16,
+      "points": 12
     },
     {
       "position": 3,
-      "team": "Curti Zona FC",
-      "played": 4,
-      "wins": 2,
-      "draws": 1,
-      "losses": 1,
-      "goalsFor": 12,
-      "goalsAgainst": 11,
-      "points": 7
+      "team": "La Weed Squadra",
+      "played": 5,
+      "wins": 3,
+      "draws": 0,
+      "losses": 2,
+      "goalsFor": 15,
+      "goalsAgainst": 13,
+      "points": 9
     },
     {
       "position": 4,
-      "team": "La Weed Squadra",
-      "played": 4,
+      "team": "Curti Zona FC",
+      "played": 5,
       "wins": 2,
-      "draws": 0,
+      "draws": 1,
       "losses": 2,
-      "goalsFor": 9,
-      "goalsAgainst": 12,
-      "points": 6
+      "goalsFor": 16,
+      "goalsAgainst": 16,
+      "points": 7
     },
     {
       "position": 5,
-      "team": "Eleven K",
-      "played": 4,
+      "team": "Jameson FC",
+      "played": 5,
       "wins": 1,
-      "draws": 1,
+      "draws": 2,
       "losses": 2,
-      "goalsFor": 6,
-      "goalsAgainst": 11,
-      "points": 4
+      "goalsFor": 11,
+      "goalsAgainst": 17,
+      "points": 5
     },
     {
       "position": 6,
       "team": "CD Póvoa de Santo Adrião",
-      "played": 4,
+      "played": 5,
       "wins": 1,
-      "draws": 0,
+      "draws": 1,
       "losses": 3,
-      "goalsFor": 11,
-      "goalsAgainst": 13,
-      "points": 3
+      "goalsFor": 13,
+      "goalsAgainst": 15,
+      "points": 4
     },
     {
       "position": 7,
-      "team": "ACMI",
-      "played": 4,
-      "wins": 0,
-      "draws": 2,
-      "losses": 2,
+      "team": "Eleven K",
+      "played": 5,
+      "wins": 1,
+      "draws": 1,
+      "losses": 3,
       "goalsFor": 9,
-      "goalsAgainst": 13,
-      "points": 2
+      "goalsAgainst": 15,
+      "points": 4
     },
     {
       "position": 8,
-      "team": "Jameson FC",
-      "played": 4,
+      "team": "ACMI",
+      "played": 5,
       "wins": 0,
-      "draws": 2,
+      "draws": 3,
       "losses": 2,
-      "goalsFor": 7,
-      "goalsAgainst": 14,
-      "points": 2
+      "goalsFor": 11,
+      "goalsAgainst": 15,
+      "points": 3
     }
   ],
   "stats": [
@@ -255,8 +255,8 @@
     {
       "playerId": "mygol-39112",
       "playerName": "Mamadu Djaló",
-      "appearances": 2,
-      "goals": 0,
+      "appearances": 3,
+      "goals": 1,
       "assists": 1,
       "yellowCards": 1,
       "redCards": 1
@@ -264,7 +264,7 @@
     {
       "playerId": "codinha",
       "playerName": "Bruno Codinha",
-      "appearances": 2,
+      "appearances": 3,
       "goals": 0,
       "assists": 0,
       "yellowCards": 0,
@@ -273,7 +273,7 @@
     {
       "playerId": "jonicas",
       "playerName": "João Figueira",
-      "appearances": 4,
+      "appearances": 5,
       "goals": 0,
       "assists": 0,
       "yellowCards": 0,
@@ -282,16 +282,16 @@
     {
       "playerId": "andre",
       "playerName": "André Lopes",
-      "appearances": 3,
-      "goals": 0,
+      "appearances": 4,
+      "goals": 1,
       "assists": 0,
-      "yellowCards": 1,
-      "redCards": 0
+      "yellowCards": 2,
+      "redCards": 1
     },
     {
       "playerId": "mygol-39902",
       "playerName": "João Almeida",
-      "appearances": 3,
+      "appearances": 4,
       "goals": 0,
       "assists": 0,
       "yellowCards": 1,
@@ -300,7 +300,7 @@
     {
       "playerId": "filipe",
       "playerName": "Filipe Campos",
-      "appearances": 3,
+      "appearances": 4,
       "goals": 0,
       "assists": 0,
       "yellowCards": 0,
@@ -309,19 +309,19 @@
     {
       "playerId": "peyroteo",
       "playerName": "Bruno Correia",
-      "appearances": 4,
+      "appearances": 5,
       "goals": 7,
-      "assists": 0,
-      "yellowCards": 0,
+      "assists": 1,
+      "yellowCards": 1,
       "redCards": 0
     },
     {
       "playerId": "pedrinho",
       "playerName": "Pedro Correia",
-      "appearances": 3,
-      "goals": 3,
+      "appearances": 4,
+      "goals": 4,
       "assists": 1,
-      "yellowCards": 3,
+      "yellowCards": 4,
       "redCards": 0
     },
     {
@@ -336,7 +336,7 @@
     {
       "playerId": "francis",
       "playerName": "Francisco Gonçalves",
-      "appearances": 4,
+      "appearances": 5,
       "goals": 0,
       "assists": 0,
       "yellowCards": 0,
@@ -530,10 +530,10 @@
       "date": "2026-11-08T19:00:00+00:00",
       "home": "ACMI",
       "away": "CD Póvoa de Santo Adrião",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 2,
+      "awayScore": 2,
       "venue": "Funsports Alfragide",
-      "status": 1
+      "status": 5
     },
     {
       "id": "league-5-2",
@@ -541,10 +541,10 @@
       "date": "2026-11-08T20:00:00+00:00",
       "home": "Eleven K",
       "away": "Jameson FC",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 3,
+      "awayScore": 4,
       "venue": "Funsports Alfragide",
-      "status": 1
+      "status": 5
     },
     {
       "id": "league-5-3",
@@ -552,10 +552,10 @@
       "date": "2026-11-08T21:00:00+00:00",
       "home": "La Weed Squadra",
       "away": "Estrelas FC",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 6,
+      "awayScore": 1,
       "venue": "Funsports Alfragide",
-      "status": 1
+      "status": 5
     },
     {
       "id": "league-5-4",
@@ -563,10 +563,10 @@
       "date": "2026-11-08T22:00:00+00:00",
       "home": "Calmex FC",
       "away": "Curti Zona FC",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 5,
+      "awayScore": 4,
       "venue": "Funsports Alfragide",
-      "status": 1
+      "status": 5
     },
     {
       "id": "league-6-1",
@@ -682,8 +682,8 @@
       "id": "league-8-3",
       "round": 8,
       "date": "2026-12-06T21:00:00+00:00",
-      "home": "Eleven K",
-      "away": "Estrelas FC",
+      "home": "Jameson FC",
+      "away": "Curti Zona FC",
       "homeScore": null,
       "awayScore": null,
       "venue": "Funsports Alfragide",
@@ -692,9 +692,9 @@
     {
       "id": "league-8-4",
       "round": 8,
-      "date": "2026-12-06T22:00:00+00:00",
-      "home": "Jameson FC",
-      "away": "Curti Zona FC",
+      "date": "2026-12-06T23:00:00+00:00",
+      "home": "Eleven K",
+      "away": "Estrelas FC",
       "homeScore": null,
       "awayScore": null,
       "venue": "Funsports Alfragide",
