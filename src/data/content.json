@@ -62,11 +62,18 @@
   ],
   "news": [
     {
+      "id": "superliga-calmex-j5",
+      "date": "2026-11-08",
+      "category": "SuperLiga Lisboa 2 · Jornada 5",
+      "title": "Curti Zona perde por 5–4 frente ao Calmex",
+      "summary": "O Curti Zona FC marcou quatro golos na deslocação ao Funsports Alfragide, mas o Calmex FC venceu por 5–4. Com este resultado, o Curti Zona somou 7 pontos nas primeiras cinco jornadas da SuperLiga Lisboa 2."
+    },
+    {
       "id": "vitoria-taca-povoa-sem-craques",
       "date": "2026-11-02",
       "category": "Taça Lisboa · Vitória de equipa",
       "title": "Faltaram os craques. Não faltou Curti Zona.",
-      "summary": "Domingo, 1 de novembro, o Curti Zona FC somou uma grande vitória frente ao CD Póvoa de Santo Adrião, na Taça Lisboa. Pedrinho, Mamadu, André e Diogo, entre outros, ficaram de fora. A lista de ausências tinha nomes para uma equipa de respeito; felizmente, a lista de presentes também. Quem foi a jogo tratou de lembrar que esta camisola não vive só dos nomes nas costas. Com várias peças em falta, a resposta foi de equipa: uma vitória para celebrar por todos, dentro e fora do campo. Os ausentes fizeram falta — mas o Curti Zona fez o resto.",
+      "summary": "Domingo, 1 de novembro, o Curti Zona FC venceu o CD Póvoa de Santo Adrião por 11–2 na Taça Lisboa, no Funsports Alfragide. Pedrinho, Mamadu, André e Diogo, entre outros, ficaram de fora. A lista de ausências tinha nomes para uma equipa de respeito; felizmente, a lista de presentes também. Quem foi a jogo tratou de lembrar que esta camisola não vive só dos nomes nas costas. Com várias peças em falta, a resposta foi de equipa: uma vitória para celebrar por todos, dentro e fora do campo. Os ausentes fizeram falta — mas o Curti Zona fez o resto.",
       "notice": "Aviso aos craques ausentes: podem voltar. Mas agora vão ter de conquistar o lugar. A vitória fica para a família toda; a próxima convocatória promete conversa."
     },
     {
@@ -74,7 +81,7 @@
       "date": "2026-10-11",
       "category": "Taça Lisboa · Grupo C",
       "title": "Taça com travo amargo: 2–3 frente ao Taberna.",
-      "summary": "O Curti Zona FC perdeu por 2–3 com o Taberna FC na primeira jornada da fase de grupos da Taça Lisboa, em Funsports Alfragide. Peyroteo marcou aos 26 minutos, com assistência de Mamadu, e Ambrux voltou a marcar aos 35. Francis, Pedrinho e André viram cartão amarelo. A fase de grupos continua: o próximo jogo da Taça está marcado para 1 de novembro, às 17h, frente ao Póvoa de Santo Adrião, em Alfragide.",
+      "summary": "O Curti Zona FC perdeu por 2–3 com o Taberna FC na primeira jornada da fase de grupos da Taça Lisboa, no Funsports Alfragide. Peyroteo marcou aos 26 minutos, com assistência de Mamadu, e Ambrux voltou a marcar aos 35. Francis, Pedrinho e André viram cartão amarelo.",
       "notice": "Golos, assistência e cartões já contam nos números da época. Os highlights estão disponíveis na Zona TV.",
       "videoId": "taberna-taca-j1"
     },
